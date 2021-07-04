@@ -1,0 +1,15 @@
+EESchema-DOCLIB  Version 2.0
+#
+$CMP NE555DR
+D Single Precision Timer
+K
+F http://www.ti.com/lit/ds/symlink/ne555.pdf
+$ENDCMP
+#
+$CMP KCDX-5S-S2
+D Circular DIN Connectors 5P R/A PCB SHIELDED 5mm CIRC DIN RECPT
+K
+F http://www.kycon.com/Pub_Eng_Draw/KCDX-5S-S2.pdf
+$ENDCMP
+#
+#End Doc Library
