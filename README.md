@@ -6,9 +6,9 @@ The A2000 Serotina Keyboard is a build it yourself Open Source Hardware Mechanic
 
 - Uses standard PC keyboard case
 
-- Uses standard PC keycaps
+- Supports using standard PC keycaps
 
-- Allows the use of the WASD keycap printing service to get Amiga specific keycaps
+- Allows the use of the WASD keycap printing service for Amiga specific keycaps
 
 - All soldering is Through Hole - no SMD soldering required
 
@@ -21,6 +21,12 @@ The A2000 Serotina Keyboard is a build it yourself Open Source Hardware Mechanic
 - Supports both Cherry MX and Alps type switches
 
 - Uses QMK firmware ( with Amiga specific code added )
+
+- Multiple QMK keymaps supported for regional key variations
+
+- Plugs directly in to an A2000 or A3000 using the 5 pin Din connector - no USB required
+
+- Functions as a PC keyboard via USB
 
   
 
