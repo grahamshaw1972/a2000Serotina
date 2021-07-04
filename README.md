@@ -32,5 +32,7 @@ The A2000 Serotina Keyboard is a build it yourself Open Source Hardware Mechanic
 
 The Serotina Keyboard will look like this: 
 
-![a2000keyboardremake.png](keyboardLayoutEditor/a2000keyboardremake.png)
+
+
+![a2000keyboardremake.png](keyboardLayoutEditor/a2000serotina.png)
 
