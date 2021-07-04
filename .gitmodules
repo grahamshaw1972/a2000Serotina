@@ -4,3 +4,9 @@
 [submodule "kicad/random-keyboard-parts.pretty"]
 	path = kicad/random-keyboard-parts.pretty
 	url = https://github.com/ai03-2725/random-keyboard-parts.pretty
+[submodule "kicad/teensy_library"]
+	path = kicad/teensy_library
+	url = https://github.com/XenGi/teensy_library
+[submodule "kicad/teensy.pretty"]
+	path = kicad/teensy.pretty
+	url = https://github.com/XenGi/teensy.pretty
