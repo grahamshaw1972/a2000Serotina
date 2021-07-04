@@ -1,0 +1,241 @@
+EESchema Schematic File Version 4
+EELAYER 30 0
+EELAYER END
+$Descr A4 11693 8268
+encoding utf-8
+Sheet 1 1
+Title ""
+Date ""
+Rev ""
+Comp ""
+Comment1 ""
+Comment2 ""
+Comment3 ""
+Comment4 ""
+$EndDescr
+$Comp
+L MX_Alps_Hybrid:MX-NoLED MX1
+U 1 1 60E22B50
+P 1450 1100
+F 0 "MX1" H 1483 1371 60  0000 C CNN
+F 1 "MX-NoLED" H 1483 1249 20  0001 C CNN
+F 2 "" H 825 1075 60  0001 C CNN
+F 3 "" H 825 1075 60  0001 C CNN
+F 4 "Esc" H 1483 1273 50  0000 C CNN "Key"
+	1    1450 1100
+	1    0    0    -1  
+$EndComp
+$Comp
+L MX_Alps_Hybrid:MX-NoLED MX2
+U 1 1 60E2528C
+P 1450 1800
+F 0 "MX2" H 1483 2071 60  0000 C CNN
+F 1 "MX-NoLED" H 1483 1949 20  0001 C CNN
+F 2 "" H 825 1775 60  0001 C CNN
+F 3 "" H 825 1775 60  0001 C CNN
+F 4 "F8" H 1483 1973 50  0000 C CNN "Key"
+	1    1450 1800
+	1    0    0    -1  
+$EndComp
+Text GLabel 1600 750  1    50   Input ~ 0
+COL0
+Wire Wire Line
+	1600 750  1600 1050
+$Comp
+L teensy:Teensy++2.0_(C) U?
+U 1 1 60E2FD3D
+P 9750 2200
+F 0 "U?" H 9750 3837 60  0000 C CNN
+F 1 "Teensy++2.0_(C)" H 9750 3731 60  0000 C CNN
+F 2 "" H 9850 1350 60  0000 C CNN
+F 3 "" H 9850 1350 60  0000 C CNN
+	1    9750 2200
+	1    0    0    -1  
+$EndComp
+Text GLabel 8700 2450 0    50   Input ~ 0
+COL0
+$Comp
+L Device:D_Small D1
+U 1 1 60E33B6B
+P 1350 1350
+F 0 "D1" V 1350 1282 50  0000 R CNN
+F 1 "D_Small" V 1305 1282 50  0001 R CNN
+F 2 "" V 1350 1350 50  0001 C CNN
+F 3 "~" V 1350 1350 50  0001 C CNN
+	1    1350 1350
+	0    -1   -1   0   
+$EndComp
+Wire Wire Line
+	1350 1250 1400 1250
+Text GLabel 1200 1450 0    50   Input ~ 0
+ROW0
+Wire Wire Line
+	1200 1450 1350 1450
+Text GLabel 8700 1050 0    50   Input ~ 0
+ROW0
+$Comp
+L Device:D_Small D2
+U 1 1 60E3D5C5
+P 1350 2050
+F 0 "D2" V 1350 1982 50  0000 R CNN
+F 1 "D_Small" V 1305 1982 50  0001 R CNN
+F 2 "" V 1350 2050 50  0001 C CNN
+F 3 "~" V 1350 2050 50  0001 C CNN
+	1    1350 2050
+	0    -1   -1   0   
+$EndComp
+Wire Wire Line
+	1400 1950 1350 1950
+Text GLabel 1200 2150 0    50   Input ~ 0
+ROW1
+Wire Wire Line
+	1200 2150 1350 2150
+Text GLabel 8700 1150 0    50   Input ~ 0
+ROW1
+$Comp
+L MX_Alps_Hybrid:MX-NoLED MX?
+U 1 1 60E3FFEA
+P 1450 2500
+F 0 "MX?" H 1483 2771 60  0000 C CNN
+F 1 "MX-NoLED" H 1483 2649 20  0001 C CNN
+F 2 "" H 825 2475 60  0001 C CNN
+F 3 "" H 825 2475 60  0001 C CNN
+F 4 "GRAVE" H 1483 2673 50  0000 C CNN "Key"
+	1    1450 2500
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:D_Small D3
+U 1 1 60E3FFF0
+P 1350 2750
+F 0 "D3" V 1350 2682 50  0000 R CNN
+F 1 "D_Small" V 1305 2682 50  0001 R CNN
+F 2 "" V 1350 2750 50  0001 C CNN
+F 3 "~" V 1350 2750 50  0001 C CNN
+	1    1350 2750
+	0    -1   -1   0   
+$EndComp
+Wire Wire Line
+	1400 2650 1350 2650
+Text GLabel 1200 2850 0    50   Input ~ 0
+ROW2
+Wire Wire Line
+	1200 2850 1350 2850
+Text GLabel 8700 1250 0    50   Input ~ 0
+ROW2
+Text GLabel 8700 1350 0    50   Input ~ 0
+ROW3
+Text GLabel 8700 1450 0    50   Input ~ 0
+ROW4
+Text GLabel 8700 1550 0    50   Input ~ 0
+ROW5
+Text GLabel 8700 1650 0    50   Input ~ 0
+ROW6
+Text GLabel 8700 1750 0    50   Input ~ 0
+ROW7
+Text GLabel 8700 2050 0    50   Input ~ 0
+ROW8
+Text GLabel 8700 2150 0    50   Input ~ 0
+ROW9
+Text GLabel 8700 2250 0    50   Input ~ 0
+ROW10
+Text GLabel 8700 2350 0    50   Input ~ 0
+ROW11
+Text GLabel 8700 2550 0    50   Input ~ 0
+COL1
+Text GLabel 8700 2650 0    50   Input ~ 0
+COL2
+Text GLabel 8700 2750 0    50   Input ~ 0
+COL3
+Text GLabel 10800 2850 2    50   Input ~ 0
+COL4
+Text GLabel 10800 2750 2    50   Input ~ 0
+COL5
+Text GLabel 10800 2650 2    50   Input ~ 0
+COL6
+Text GLabel 10800 2550 2    50   Input ~ 0
+COL7
+Text GLabel 10800 2450 2    50   Input ~ 0
+COL8
+Text GLabel 10800 2350 2    50   Input ~ 0
+COL9
+Text GLabel 10800 2250 2    50   Input ~ 0
+COL10
+Text GLabel 10800 3350 2    50   Input ~ 0
+NMLCK
+Text GLabel 10800 3450 2    50   Input ~ 0
+CPLCK
+Text GLabel 10800 3550 2    50   Input ~ 0
+SCLCK
+Text GLabel 8700 3550 0    50   Input ~ 0
+STA1
+Text GLabel 8700 3450 0    50   Input ~ 0
+STA2
+Text GLabel 8700 3350 0    50   Input ~ 0
+STA3
+Text GLabel 8700 3250 0    50   Input ~ 0
+KCLK
+Text GLabel 8700 3150 0    50   Input ~ 0
+KDAT
+Text GLabel 8350 850  0    50   Input ~ 0
+GND
+Wire Wire Line
+	8700 850  8550 850 
+$Comp
+L power:PWR_FLAG #FLG?
+U 1 1 60E43F08
+P 8550 800
+F 0 "#FLG?" H 8550 875 50  0001 C CNN
+F 1 "PWR_FLAG" H 8550 973 50  0000 C CNN
+F 2 "" H 8550 800 50  0001 C CNN
+F 3 "~" H 8550 800 50  0001 C CNN
+	1    8550 800 
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	8550 850  8550 800 
+Connection ~ 8550 850 
+Wire Wire Line
+	8550 850  8350 850 
+Text GLabel 11000 2150 2    50   Input ~ 0
+VCC
+$Comp
+L power:PWR_FLAG #FLG?
+U 1 1 60E44245
+P 10950 2100
+F 0 "#FLG?" H 10950 2175 50  0001 C CNN
+F 1 "PWR_FLAG" H 10950 2273 50  0000 C CNN
+F 2 "" H 10950 2100 50  0001 C CNN
+F 3 "~" H 10950 2100 50  0001 C CNN
+	1    10950 2100
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	10800 2150 10950 2150
+Wire Wire Line
+	10950 2100 10950 2150
+Connection ~ 10950 2150
+Wire Wire Line
+	10950 2150 11000 2150
+NoConn ~ 8700 950 
+NoConn ~ 8700 1850
+NoConn ~ 8700 1950
+NoConn ~ 8700 2850
+NoConn ~ 8700 2950
+NoConn ~ 8700 3050
+NoConn ~ 10800 850 
+NoConn ~ 10800 950 
+NoConn ~ 10800 1250
+NoConn ~ 10800 1350
+NoConn ~ 10800 1450
+NoConn ~ 10800 1550
+NoConn ~ 10800 1650
+NoConn ~ 10800 1750
+NoConn ~ 10800 1850
+NoConn ~ 10800 1950
+NoConn ~ 10800 2050
+NoConn ~ 10800 2950
+NoConn ~ 10800 3050
+NoConn ~ 10800 3150
+NoConn ~ 10800 3250
+$EndSCHEMATC
