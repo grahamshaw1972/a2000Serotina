@@ -10631,7 +10631,7 @@
     )
   )
 
-  (gr_text "A2000 Serotina V1.0 - created by grshaw and bperryman with thanks to LIV2" (at 558.8 -3.96875) (layer F.SilkS)
+  (gr_text "A2000 Serotina V1.0 - created by grshaw and bperryman with thanks to Rob Taylor and LIV2" (at 558.8 -3.96875) (layer F.SilkS)
     (effects (font (size 1.27 1.27) (thickness 0.15)))
   )
   (gr_line (start 829.46875 95.25) (end 829.46875 -28.575) (layer Edge.Cuts) (width 0.05) (tstamp 60E75342))
