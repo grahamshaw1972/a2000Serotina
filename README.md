@@ -36,3 +36,8 @@ The Serotina Keyboard will look like this:
 
 ![a2000keyboardremake.png](keyboardLayoutEditor/a2000serotina.png)
 
+
+
+The design for V1.0 of the PCB looks like this: 
+
+![pcbV1_0.PNG](pcbV1_0.PNG)
