@@ -41,3 +41,9 @@ The Serotina Keyboard will look like this:
 The design for V1.0 of the PCB looks like this: 
 
 ![pcbV1_0.PNG](pcbV1_0.PNG)
+
+
+
+A 3D render of the V1.0 PCB:
+
+![](renderV1_0.png)
