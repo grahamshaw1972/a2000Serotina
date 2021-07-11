@@ -65,7 +65,7 @@ unsigned long get_msec(void);
 #define LAMI B6
 #define CTRL B3
 #define RAMI B2
-
+/*
 #define LAYOUT( \
     K00,      K02, K03, K04, K05,      K07, K08, K09,        \
     K10,      K12, K13, K14, K15,      K17, K18, K19,        \
@@ -92,6 +92,21 @@ unsigned long get_msec(void);
     { K90,   K91,   K92,   K93,   K94,   K95,   K96,   K97,   K98,   KC_NO, KC_NO }, \
     { KA0,   KA1,   KA2,   KA3,   KA4,   KA5,   KA6,   KC_NO, KC_NO, KC_NO, KC_NO }, \
     { KB0,   KB1,   KB2,   KB3,   KB4,   KB5,   KC_NO, KC_NO, KC_NO, KC_NO, KC_NO }, \
+}
+*/
+
+#define LAYOUT( \
+    K00, K01, K02, K03,   \
+    K10, K11, K12, K13,   \
+    K20, K21, K22, K23,   \
+    K30, K31, K32, K43,   \
+    K41,      K42         \
+) { \
+    { K00,   K01,   K02,   K03   }, \
+    { K10,   K11,   K12,   K13   }, \
+    { K20,   K21,   K22,   K23   }, \
+    { K30,   K31,   K32,   KC_NO }, \
+    { KC_NO, K41,   K42,   K43   }, \
 }
 
 // Amiga Keycodes

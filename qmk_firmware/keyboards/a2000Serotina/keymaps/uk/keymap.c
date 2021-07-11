@@ -17,6 +17,7 @@
 #include QMK_KEYBOARD_H
 #include "../../a2000Serotina.h"
 
+/*
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     [0] = LAYOUT(
         KC_ESC,           KC_F1,   KC_F2,   KC_F3,   KC_F4,            KC_F5,   KC_F6,   KC_F7,
@@ -35,7 +36,19 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 
 };
 
-/*
+*/
+
+const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
+    [0] = LAYOUT(
+        KC_LPRN, KC_RPRN, KC_PSLS, KC_PAST,
+        KC_P7,   KC_P8,   KC_P9,   KC_PMNS,
+        KC_P4,   KC_P5,   KC_P6,   KC_PPLS,
+        KC_P1,   KC_P2,   KC_P3,   KC_PENT,
+        KC_P0,            KC_PDOT
+    ),
+
+};
+
 unsigned char amiga_keycode_table[MATRIX_ROWS][MATRIX_COLS] = LAYOUT(
 		AKC_PLP,  AKC_PRP,   AKC_PDV,  AKC_PML,
 		AKC_P7,   AKC_P8,    AKC_P9,   AKC_PMN,
@@ -43,8 +56,8 @@ unsigned char amiga_keycode_table[MATRIX_ROWS][MATRIX_COLS] = LAYOUT(
 		AKC_P1,   AKC_P2,    AKC_P3,   AKC_PEN,
 		AKC_P0,              AKC_PDT
     );
-*/
 
+/*
 unsigned char amiga_keycode_table[MATRIX_ROWS][MATRIX_COLS] = LAYOUT(
 		0x00,             0x00,    0x00,    0x00,    0x00,             0x00,    0x00,    0x00,
         0x00,             0x00,    0x00,    0x00,    0x00,             0x00,    0x00,    0x00,
@@ -59,3 +72,5 @@ unsigned char amiga_keycode_table[MATRIX_ROWS][MATRIX_COLS] = LAYOUT(
         0x00,   0x00,     0x00,    0x00,    0x00,    0x00,   0x00,
         0x00,   0x00,     0x00,    0x00,    0x00,    0x00
     );
+*/
+

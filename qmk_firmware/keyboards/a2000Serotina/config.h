@@ -26,8 +26,13 @@
 #define PRODUCT         a2000Serotina
 
 /* key matrix size */
+/*
 #define MATRIX_ROWS 12
 #define MATRIX_COLS 11
+*/
+
+#define MATRIX_ROWS 5
+#define MATRIX_COLS 4
 
 /*
  * Keyboard Matrix Assignments
@@ -39,8 +44,12 @@
  *                  ROW2COL = ROW = Anode (+), COL = Cathode (-, marked on diode)
  *
  */
+/*
 #define MATRIX_ROW_PINS { D0, D1, D2, D3, D4, D5, D6, D7, C0, C1, C2, C3 }
 #define MATRIX_COL_PINS { C4, C5, C6, C7, B0, B1, B2, B3, B4, B5, B6 }
+*/
+#define MATRIX_ROW_PINS { D0, D1, D2, D3, D4 }
+#define MATRIX_COL_PINS { C0, C1, C2, C3 }
 
 #define DIODE_DIRECTION COL2ROW
 #define NO_USB_STARTUP_CHECK 1
