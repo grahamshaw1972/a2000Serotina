@@ -122,7 +122,7 @@ Text GLabel 18300 2500 0    50   Input ~ 0
 ROW4
 Text GLabel 18300 2600 0    50   Input ~ 0
 ROW5
-Text GLabel 18300 2700 0    50   Input ~ 0
+Text GLabel 20400 4600 2    50   Input ~ 0
 ROW6
 Text GLabel 18300 2800 0    50   Input ~ 0
 ROW7
@@ -158,7 +158,7 @@ Text GLabel 20400 4400 2    50   Input ~ 0
 NMLCK
 Text GLabel 20400 4500 2    50   Input ~ 0
 CPLCK
-Text GLabel 20400 4600 2    50   Input ~ 0
+Text GLabel 18300 2700 0    50   Input ~ 0
 SCLCK
 Text GLabel 18300 4300 0    50   Input ~ 0
 KCLK
