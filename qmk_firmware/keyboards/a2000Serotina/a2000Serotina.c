@@ -62,10 +62,11 @@ __attribute__((weak)) void matrix_init_user(void) {
     setPinOutput(STA1);
     setPinOutput(KCLK);
     writePinHigh(KCLK);
+    //writePinHigh(STA1);
 
-    setPinInput(LAMI);
-    setPinInput(CTRL);
-    setPinInput(RAMI);
+    //setPinInput(LAMI);
+    //setPinInput(CTRL);
+    //setPinInput(RAMI);
 
     init_timer();
 }
@@ -89,9 +90,9 @@ __attribute__((weak)) bool process_record_user(uint16_t keycode, keyrecord_t *re
 		writePinLow(STA3);
 	}
 
-	unsigned char amigaKeyCode = amiga_keycode_table[record->event.key.row][record->event.key.col];
-	amikb_sendkey(amigaKeyCode, record->event.pressed);
-	amikb_wait_for_ack_resync_if_none();
+	//unsigned char amigaKeyCode = amiga_keycode_table[record->event.key.row][record->event.key.col];
+	//amikb_sendkey(amigaKeyCode, record->event.pressed);
+	//amikb_wait_for_ack_resync_if_none();
 
 	return true;
 }
@@ -226,12 +227,14 @@ static void resync(void)
 }
 
 __attribute__((weak)) void housekeeping_task_user(void) {
+	/*
 	if( (PINB & CTRL_BIT) && (PINB & LAMI_BIT) && (PINB & RAMI_BIT) ){
 		writePinHigh(STA2);
 		amikb_reset();
 	} else {
 		writePinLow(STA2);
 	}
+	*/
 }
 
 void hard_reset(void) {
