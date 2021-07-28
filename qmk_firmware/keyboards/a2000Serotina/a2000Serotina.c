@@ -90,6 +90,18 @@ __attribute__((weak)) bool process_record_user(uint16_t keycode, keyrecord_t *re
 		writePinLow(STA3);
 	}
 
+	if( pressed > 1 ) {
+		writePinHigh(STA2);
+	} else {
+		writePinLow(STA2);
+	}
+
+	if( pressed > 2 ) {
+		writePinHigh(STA1);
+	} else {
+		writePinLow(STA1);
+	}
+
 	//unsigned char amigaKeyCode = amiga_keycode_table[record->event.key.row][record->event.key.col];
 	//amikb_sendkey(amigaKeyCode, record->event.pressed);
 	//amikb_wait_for_ack_resync_if_none();
