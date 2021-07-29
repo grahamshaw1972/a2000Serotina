@@ -61,6 +61,9 @@ __attribute__((weak)) void matrix_init_user(void) {
     setPinOutput(STA2);
     setPinOutput(STA1);
     setPinOutput(KCLK);
+    setPinOutput(E0);
+    setPinOutput(E1);
+    setPinOutput(B7);
     writePinHigh(KCLK);
     //writePinHigh(STA1);
 
@@ -100,6 +103,30 @@ __attribute__((weak)) bool process_record_user(uint16_t keycode, keyrecord_t *re
 		writePinHigh(STA1);
 	} else {
 		writePinLow(STA1);
+	}
+
+	if( keycode == KC_LCTL ) {
+		if( record->event.pressed) {
+			writePinHigh(E0);
+		} else {
+			writePinLow(E0);
+		}
+	}
+
+	if( keycode == KC_LALT ) {
+		if( record->event.pressed) {
+			writePinHigh(E1);
+		} else {
+			writePinLow(E1);
+		}
+	}
+
+	if( keycode == KC_RGUI ) {
+		if( record->event.pressed) {
+			writePinHigh(B7);
+		} else {
+			writePinLow(B7);
+		}
 	}
 
 	//unsigned char amigaKeyCode = amiga_keycode_table[record->event.key.row][record->event.key.col];
