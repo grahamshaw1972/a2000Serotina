@@ -111,25 +111,116 @@ unsigned long get_msec(void);
 */
 
 // Amiga Keycodes
+// Row 0
+#define AKC_ESC    0x45
+#define AKC_HELP   0x5F
+#define AKC_F10    0x59
+#define AKC_F9     0x58
+#define AKC_F8     0x57
+#define AKC_F7     0x56
+#define AKC_PSLS   0x5C
+#define AKC_F6     0x55
+#define AKC_PRPRN  0x5B
+#define AKC_F5     0x54
+#define AKC_F4     0x53
+#define AKC_F3     0x52
+#define AKC_F2     0x51
+#define AKC_F1     0x50
+#define AKC_PLPRN  0x5A
+
+// Row 1
+#define AKC_GRV    0x00
+#define AKC_1      0x01
+#define AKC_2      0x02
+#define AKC_3      0x03
+#define AKC_4      0x04
+#define AKC_5      0x05
+#define AKC_6      0x06
+#define AKC_7      0x07
+#define AKC_8      0x08
+#define AKC_9      0x09
+#define AKC_0      0x0A
+#define AKC_MINS   0x0B
+#define AKC_EQL    0x0C
+#define AKC_BSLS   0x0D
+#define AKC_UP     0x4C
+
+// Row 2
+#define AKC_TAB    0x42
+#define AKC_Q      0x10
+#define AKC_W      0x11
+#define AKC_E      0x12
+#define AKC_R      0x13
+#define AKC_T      0x14
+#define AKC_Y      0x15
+#define AKC_U      0x16
+#define AKC_I      0x17
+#define AKC_O      0x18
+#define AKC_P      0x19
+#define AKC_LBRC   0x1A
+#define AKC_RBRC   0x1B
+#define AKC_ENT    0x44
+#define AKC_LEFT   0x4F
+
+// Row 3
+#define AKC_CAPS   0x62
+#define AKC_A      0x20
+#define AKC_S      0x21
+#define AKC_D      0x22
+#define AKC_F      0x23
+#define AKC_G      0x24
+#define AKC_H      0x25
+#define AKC_J      0x26
+#define AKC_K      0x27
+#define AKC_L      0x28
+#define AKC_SCLN   0x29
+#define AKC_QUOT   0x2A
+#define AKC_NUHS   0x2B
+#define AKC_DEL    0x46
+#define AKC_RGHT   0x4E
+
+// Row 4
+#define AKC_NUBS   0x30
+#define AKC_Z      0x31
+#define AKC_X      0x32
+#define AKC_C      0x33
+#define AKC_V      0x34
+#define AKC_B      0x35
+#define AKC_N      0x36
+#define AKC_M      0x37
+#define AKC_COMM   0x38
+#define AKC_DOT    0x39
+#define AKC_SLSH   0x3A
+#define AKC_SPC    0x40
+#define AKC_BSPC   0x41
+#define AKC_DOWN   0x4D
+
+// Row 5
+#define AKC_PAST   0x5D
+#define AKC_PPLS   0x5E
+#define AKC_P9     0x3F
+#define AKC_P6     0x2F
+#define AKC_P3     0x1F
+#define AKC_PDOT   0x3C
+#define AKC_P8     0x3E
+#define AKC_P5     0x2E
+#define AKC_P2     0x1E
+#define AKC_PENT   0x43
+#define AKC_P7     0x3D
+#define AKC_P4     0x2D
+#define AKC_P1     0x1D
+#define AKC_P0     0x0F
+#define AKC_PMNS   0x4A
+
+// Direct Pin Connections - not in matrix
+#define AKC_LAMI   0x66
+#define AKC_LALT   0x64
+#define AKC_LSFT   0x60
+#define AKC_LCTL   0x63
+#define AKC_RAMI   0x67
+#define AKC_RALT   0x65
+#define AKC_RSFT   0x61
 #define AKC_RST_WARN 0x78
-#define AKC_PLP 0x5A
-#define AKC_PRP 0x5B
-#define AKC_PDV 0x5C
-#define AKC_PML 0x5D
-#define AKC_P7  0x3D
-#define AKC_P8  0x3E
-#define AKC_P9  0x3F
-#define AKC_PMN 0x4A
-#define AKC_P4  0x2D
-#define AKC_P5  0x2E
-#define AKC_P6  0x2F
-#define AKC_PPL 0x5E
-#define AKC_P1  0x1D
-#define AKC_P2  0x1E
-#define AKC_P3  0x1F
-#define AKC_PEN 0x43
-#define AKC_P0  0x0F
-#define AKC_PDT 0x3C
 
 extern unsigned char amiga_keycode_table[MATRIX_ROWS][MATRIX_COLS];
 
