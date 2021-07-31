@@ -113,20 +113,20 @@ unsigned long get_msec(void);
 // Amiga Keycodes
 // Row 0
 #define AKC_ESC    0x45
-#define AKC_HELP   0x5F
-#define AKC_F10    0x59
-#define AKC_F9     0x58
-#define AKC_F8     0x57
-#define AKC_F7     0x56
-#define AKC_PSLS   0x5C
-#define AKC_F6     0x55
-#define AKC_PRPRN  0x5B
-#define AKC_F5     0x54
-#define AKC_F4     0x53
-#define AKC_F3     0x52
-#define AKC_F2     0x51
 #define AKC_F1     0x50
-#define AKC_PLPRN  0x5A
+#define AKC_F2     0x51
+#define AKC_F3     0x52
+#define AKC_F4     0x53
+#define AKC_F5     0x54
+#define AKC_F6     0x55
+#define AKC_F7     0x56
+#define AKC_F8     0x57
+#define AKC_F9     0x58
+#define AKC_F10    0x59
+#define AKC_PLPN   0x5A
+#define AKC_PRPN   0x5B
+#define AKC_PSLS   0x5C
+#define AKC_HELP   0x5F
 
 // Row 1
 #define AKC_GRV    0x00
@@ -212,11 +212,21 @@ unsigned long get_msec(void);
 #define AKC_P0     0x0F
 #define AKC_PMNS   0x4A
 
+// Spare
+#define AKC_SPR0   0x49
+#define AKC_SPR1   0x48
+#define AKC_SPR2   0x47
+#define AKC_SPR3   0x2C
+#define AKC_SPR4   0x1C
+#define AKC_SPR5   0x0E
+#define AKC_SPR6   0x3B
+
+
 // Direct Pin Connections - not in matrix
 #define AKC_LAMI   0x66
 #define AKC_LALT   0x64
 #define AKC_LSFT   0x60
-#define AKC_LCTL   0x63
+#define AKC_CTRL   0x63
 #define AKC_RAMI   0x67
 #define AKC_RALT   0x65
 #define AKC_RSFT   0x61

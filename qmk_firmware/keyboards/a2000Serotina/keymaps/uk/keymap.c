@@ -60,17 +60,17 @@ unsigned char amiga_keycode_table[MATRIX_ROWS][MATRIX_COLS] = LAYOUT(
 */
 
 unsigned char amiga_keycode_table[MATRIX_ROWS][MATRIX_COLS] = LAYOUT(
-		0x00,             0x00,    0x00,    0x00,    0x00,    0x00,    0x00,    0x00,    0x00,    0x00,
-		0x00,    0x00,    0x00,    0x00,    0x00,    0x00,
-		0x00,    0x00,    0x00,    0x00,    0x00,    0x00,    0x00,    0x00,    0x00,    0x00,    0x00,
-		0x00,    0x00,    0x00,    0x00,    0x00,    0x00,    0x00,    0x00,    0x00,    0x00,
-		0x00,    0x00,    0x00,    0x00,    0x00,    0x00,    0x00,    0x00,    0x00,    0x00,    0x00,
-		0x00,    0x00,    0x00,    0x00,    0x00,    0x00,    0x00,    0x00,    0x00,    0x00,
-		0x00,    0x00,    0x00,    0x00,    0x00,    0x00,    0x00,    0x00,    0x00,    0x00,    0x00,
-		0x00,    0x00,                                        0x00,    0x00,    0x00,
-		0x00,    0x00,    0x00,    0x00,    0x00,    0x00,    0x00,    0x00,    0x00,    0x00,    0x00,
-		0x00,    0x00,                      0x00,             0x00,    0x00,    0x00,    0x00,
-		0x00,    0x00,    0x00,                               0x00,                               0x00,
-		0x00,    0x00,    0x00,    0x00,    0x00,    0x00,    0x00,             0x00
+		AKC_ESC,            AKC_F1,   AKC_F2,   AKC_F3,   AKC_F4,   AKC_F5,   AKC_F6,   AKC_F7,   AKC_F8,   AKC_F9,
+		AKC_F10,  AKC_SPR0, AKC_SPR1, AKC_SPR2, AKC_SPR3, AKC_SPR4,
+		AKC_GRV,  AKC_1,    AKC_2,    AKC_3,    AKC_4,    AKC_5,    AKC_6,    AKC_7,    AKC_8,    AKC_9,    AKC_0,
+		AKC_MINS, AKC_EQL,  AKC_BSPC, AKC_DEL,  AKC_DEL,  AKC_HELP, AKC_SPC,  AKC_PSLS, AKC_PAST, AKC_PMNS,
+		AKC_TAB,  AKC_Q,    AKC_W,    AKC_E,    AKC_R,    AKC_T,    AKC_Y,    AKC_U,    AKC_I,    AKC_O,    AKC_P,
+		AKC_LBRC, AKC_RBRC, AKC_ENT,  AKC_DEL,  AKC_PLPN, AKC_PRPN, AKC_P7,   AKC_P8,   AKC_P9,   AKC_PPLS,
+		AKC_CAPS, AKC_A,    AKC_S,    AKC_D,    AKC_F,    AKC_G,    AKC_H,    AKC_J,    AKC_K,    AKC_L,    AKC_SCLN,
+		AKC_NUHS, AKC_ENT,                                          AKC_P4,   AKC_P5,   AKC_P6,
+		AKC_LSFT, AKC_NUBS, AKC_Z,    AKC_X,    AKC_C,    AKC_V,    AKC_B,    AKC_N,    AKC_M,    AKC_COMM, AKC_DOT,
+		AKC_SLSH, AKC_RSFT,                     AKC_UP,             AKC_P1,   AKC_P2,   AKC_P3,   AKC_PENT,
+		AKC_CTRL, AKC_LALT, AKC_LAMI,                               AKC_SPC,                                AKC_SPC,
+		AKC_RAMI, AKC_RALT, AKC_CTRL, AKC_LEFT, AKC_DOWN, AKC_RGHT, AKC_P0,             AKC_PDOT
     );
 
