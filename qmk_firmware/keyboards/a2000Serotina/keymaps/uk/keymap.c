@@ -67,7 +67,7 @@ unsigned char amiga_keycode_table[MATRIX_ROWS][MATRIX_COLS] = LAYOUT(
 		AKC_TAB,  AKC_Q,    AKC_W,    AKC_E,    AKC_R,    AKC_T,    AKC_Y,    AKC_U,    AKC_I,    AKC_O,    AKC_P,
 		AKC_LBRC, AKC_RBRC, AKC_ENT,  AKC_DEL,  AKC_PLPN, AKC_PRPN, AKC_P7,   AKC_P8,   AKC_P9,   AKC_PPLS,
 		AKC_CAPS, AKC_A,    AKC_S,    AKC_D,    AKC_F,    AKC_G,    AKC_H,    AKC_J,    AKC_K,    AKC_L,    AKC_SCLN,
-		AKC_NUHS, AKC_ENT,                                          AKC_P4,   AKC_P5,   AKC_P6,
+		AKC_QUOT, AKC_ENT,                                          AKC_P4,   AKC_P5,   AKC_P6,
 		AKC_LSFT, AKC_NUBS, AKC_Z,    AKC_X,    AKC_C,    AKC_V,    AKC_B,    AKC_N,    AKC_M,    AKC_COMM, AKC_DOT,
 		AKC_SLSH, AKC_RSFT,                     AKC_UP,             AKC_P1,   AKC_P2,   AKC_P3,   AKC_PENT,
 		AKC_CTRL, AKC_LALT, AKC_LAMI,                               AKC_SPC,                                AKC_SPC,

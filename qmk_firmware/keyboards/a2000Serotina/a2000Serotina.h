@@ -38,13 +38,6 @@ unsigned long get_msec(void);
 #define ADATA	7
 #define ADATA_BIT	(1 << ADATA)
 
-#define PIN_CTRL 3
-#define CTRL_BIT	(1 << PIN_CTRL)
-#define PIN_LAMI 6
-#define LAMI_BIT	(1 << PIN_LAMI)
-#define PIN_RAMI 2
-#define RAMI_BIT	(1 << PIN_RAMI)
-
 #define TIMEOUT_MSEC 143
 #define RESET_WARNING_MSEC 250
 #define RESET_MSEC 500
@@ -61,10 +54,6 @@ unsigned long get_msec(void);
 #define STA1 F5
 #define KDAT F7
 #define KCLK F6
-
-#define LAMI B6
-#define CTRL B3
-#define RAMI B2
 
 #define LAYOUT( \
     K00,      K02, K03, K04, K05, K06, K07, K08, K09, K0A,   \
