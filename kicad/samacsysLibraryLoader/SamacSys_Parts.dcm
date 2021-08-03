@@ -12,4 +12,10 @@ K
 F http://www.kycon.com/Pub_Eng_Draw/KCDX-5S-S2.pdf
 $ENDCMP
 #
+$CMP 90121-0766
+D 6 way single row r/a header Molex C-GRID III Series, Series Number 90121, 2.54mm Pitch 6 Way 1 Row Right Angle Pin Header, Through Hole
+K
+F http://www.molex.com/webdocs/datasheets/pdf/en-us/0901210766_PCB_HEADERS.pdf
+$ENDCMP
+#
 #End Doc Library

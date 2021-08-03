@@ -2762,34 +2762,14 @@ F 3 "~" V 7250 4750 50  0001 C CNN
 $EndComp
 Wire Wire Line
 	7300 4650 7250 4650
-$Comp
-L SamacSys_Parts:KCDX-5S-S2 J1
-U 1 1 60E7B5EA
-P 12150 1950
-F 0 "J1" H 12600 2215 50  0000 C CNN
-F 1 "KCDX-5S-S2" H 12600 2124 50  0000 C CNN
-F 2 "SamacSys_Parts:KCDX5SS2" H 12900 2050 50  0001 L CNN
-F 3 "http://www.kycon.com/Pub_Eng_Draw/KCDX-5S-S2.pdf" H 12900 1950 50  0001 L CNN
-F 4 "Circular DIN Connectors 5P R/A PCB SHIELDED 5mm CIRC DIN RECPT" H 12900 1850 50  0001 L CNN "Description"
-F 5 "21.2" H 12900 1750 50  0001 L CNN "Height"
-F 6 "" H 12900 1650 50  0001 L CNN "Mouser Part Number"
-F 7 "" H 12900 1550 50  0001 L CNN "Mouser Price/Stock"
-F 8 "Kycon, Inc." H 12900 1450 50  0001 L CNN "Manufacturer_Name"
-F 9 "KCDX-5S-S2" H 12900 1350 50  0001 L CNN "Manufacturer_Part_Number"
-	1    12150 1950
-	1    0    0    -1  
-$EndComp
-NoConn ~ 13050 2050
-NoConn ~ 13050 2150
-Text GLabel 13050 1950 2    50   Input ~ 0
+Text GLabel 12400 2650 0    50   Input ~ 0
 GND
-Text GLabel 12150 2250 0    50   Input ~ 0
+Text GLabel 12400 2750 0    50   Input ~ 0
 VCC
-Text GLabel 12150 2150 0    50   Input ~ 0
+Text GLabel 12400 3050 0    50   Input ~ 0
 KCLK
-Text GLabel 12150 2050 0    50   Input ~ 0
+Text GLabel 12400 3150 0    50   Input ~ 0
 KDAT
-NoConn ~ 12150 1950
 $Comp
 L Device:R_Small R1
 U 1 1 60ED929C
@@ -3749,7 +3729,7 @@ U 1 1 6108CB78
 P 11500 8500
 F 0 "H1" H 11600 8546 50  0000 L CNN
 F 1 "MountingHole" H 11600 8455 50  0000 L CNN
-F 2 "" H 11500 8500 50  0001 C CNN
+F 2 "MountingHole:MountingHole_3.2mm_M3" H 11500 8500 50  0001 C CNN
 F 3 "~" H 11500 8500 50  0001 C CNN
 	1    11500 8500
 	1    0    0    -1  
@@ -3760,7 +3740,7 @@ U 1 1 61091AB8
 P 11500 9000
 F 0 "H2" H 11600 9046 50  0000 L CNN
 F 1 "MountingHole" H 11600 8955 50  0000 L CNN
-F 2 "" H 11500 9000 50  0001 C CNN
+F 2 "MountingHole:MountingHole_3.2mm_M3" H 11500 9000 50  0001 C CNN
 F 3 "~" H 11500 9000 50  0001 C CNN
 	1    11500 9000
 	1    0    0    -1  
@@ -3771,7 +3751,7 @@ U 1 1 6109356F
 P 11500 9500
 F 0 "H3" H 11600 9546 50  0000 L CNN
 F 1 "MountingHole" H 11600 9455 50  0000 L CNN
-F 2 "" H 11500 9500 50  0001 C CNN
+F 2 "MountingHole:MountingHole_3.2mm_M3" H 11500 9500 50  0001 C CNN
 F 3 "~" H 11500 9500 50  0001 C CNN
 	1    11500 9500
 	1    0    0    -1  
@@ -3782,7 +3762,7 @@ U 1 1 61093A5D
 P 11500 10000
 F 0 "H4" H 11600 10046 50  0000 L CNN
 F 1 "MountingHole" H 11600 9955 50  0000 L CNN
-F 2 "" H 11500 10000 50  0001 C CNN
+F 2 "MountingHole:MountingHole_3.2mm_M3" H 11500 10000 50  0001 C CNN
 F 3 "~" H 11500 10000 50  0001 C CNN
 	1    11500 10000
 	1    0    0    -1  
@@ -3793,18 +3773,18 @@ U 1 1 610956B2
 P 12500 8500
 F 0 "H5" H 12600 8546 50  0000 L CNN
 F 1 "MountingHole" H 12600 8455 50  0000 L CNN
-F 2 "" H 12500 8500 50  0001 C CNN
+F 2 "MountingHole:MountingHole_6.4mm_M6" H 12500 8500 50  0001 C CNN
 F 3 "~" H 12500 8500 50  0001 C CNN
 	1    12500 8500
 	1    0    0    -1  
 $EndComp
 $Comp
-L Mechanical:MountingHole H?
+L Mechanical:MountingHole H6
 U 1 1 61095E33
 P 12500 9000
-F 0 "H?" H 12600 9046 50  0000 L CNN
+F 0 "H6" H 12600 9046 50  0000 L CNN
 F 1 "MountingHole" H 12600 8955 50  0000 L CNN
-F 2 "" H 12500 9000 50  0001 C CNN
+F 2 "MountingHole:MountingHole_6.4mm_M6" H 12500 9000 50  0001 C CNN
 F 3 "~" H 12500 9000 50  0001 C CNN
 	1    12500 9000
 	1    0    0    -1  
@@ -3815,9 +3795,28 @@ U 1 1 6109789A
 P 12500 9500
 F 0 "H7" H 12600 9546 50  0000 L CNN
 F 1 "MountingHole" H 12600 9455 50  0000 L CNN
-F 2 "" H 12500 9500 50  0001 C CNN
+F 2 "MountingHole:MountingHole_6.4mm_M6" H 12500 9500 50  0001 C CNN
 F 3 "~" H 12500 9500 50  0001 C CNN
 	1    12500 9500
 	1    0    0    -1  
 $EndComp
+$Comp
+L SamacSys_Parts:90121-0766 J1
+U 1 1 610BC7F5
+P 12400 2650
+F 0 "J1" H 13028 2446 50  0000 L CNN
+F 1 "90121-0766" H 13028 2355 50  0000 L CNN
+F 2 "901210766" H 13050 2750 50  0001 L CNN
+F 3 "http://www.molex.com/webdocs/datasheets/pdf/en-us/0901210766_PCB_HEADERS.pdf" H 13050 2650 50  0001 L CNN
+F 4 "6 way single row r/a header Molex C-GRID III Series, Series Number 90121, 2.54mm Pitch 6 Way 1 Row Right Angle Pin Header, Through Hole" H 13050 2550 50  0001 L CNN "Description"
+F 5 "4" H 13050 2450 50  0001 L CNN "Height"
+F 6 "538-90121-0766" H 13050 2350 50  0001 L CNN "Mouser Part Number"
+F 7 "https://www.mouser.co.uk/ProductDetail/Molex/90121-0766?qs=PvP5v7EimslgD6hQyHQ2Ag%3D%3D" H 13050 2250 50  0001 L CNN "Mouser Price/Stock"
+F 8 "Molex" H 13050 2150 50  0001 L CNN "Manufacturer_Name"
+F 9 "90121-0766" H 13050 2050 50  0001 L CNN "Manufacturer_Part_Number"
+	1    12400 2650
+	1    0    0    -1  
+$EndComp
+NoConn ~ 12400 2850
+NoConn ~ 12400 2950
 $EndSCHEMATC
