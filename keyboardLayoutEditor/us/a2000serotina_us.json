@@ -1,6 +1,6 @@
 [
   {
-    "name": "a2000Serotina",
+    "name": "a2000Serotina_us",
     "author": "Graham Shaw",
     "switchMount": "cherry",
     "switchBrand": "gateron",
@@ -56,8 +56,8 @@
       "c": "#cccccc"
     },
     "!\n1",
-    "\"\n2",
-    "£\n3",
+    "@\n2",
+    "#\n3",
     "$\n4",
     "%\n5",
     "^\n6",
@@ -122,15 +122,13 @@
     "Enter",
     {
       "x": 0.25,
-      "c": "#cccccc",
-      "a": 7
+      "c": "#cccccc"
     },
-    "",
-    "",
-    "",
+    "Del",
+    "(",
+    ")",
     {
-      "x": 0.25,
-      "a": 4
+      "x": 0.25
     },
     "7\nHome",
     "8\n↑",
@@ -159,7 +157,7 @@
     "K",
     "L",
     ":\n;",
-    "@\n#",
+    "\"\n'",
     {
       "c": "#999999",
       "a": 7

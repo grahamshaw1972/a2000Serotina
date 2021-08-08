@@ -102,7 +102,7 @@ __attribute__((weak)) bool process_record_user(uint16_t keycode, keyrecord_t *re
 
 			// There is a bug with caps lock handling.
 			// Ignore caps lock as a temporary "fix"...
-			if(keycode != AKC_CAPS) {
+			if(amigaKeyCode != AKC_CAPS) {
 				amikb_sendkey(amigaKeyCode, keyPressed);
 				amikb_wait_for_ack_resync_if_none();
 			}
