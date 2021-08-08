@@ -66,7 +66,7 @@ __attribute__((weak)) void matrix_init_user(void) {
     init_timer();
 }
 
-static unsigned char prev_keycode = 0xff;
+static unsigned char prevAmigaKeycode = 0xff;
 //static unsigned char capslk;
 static unsigned char amiga_key_pressed[AKC_MAX] = { 0 }; // Zero-fill
 
@@ -99,13 +99,8 @@ __attribute__((weak)) bool process_record_user(uint16_t keycode, keyrecord_t *re
 		amikb_reset();
 	} else {
 		if( (previousCount == 0 && newCount > 0) || (previousCount > 0 && newCount == 0) ) {
-
-			// There is a bug with caps lock handling.
-			// Ignore caps lock as a temporary "fix"...
-			if(amigaKeyCode != AKC_CAPS) {
-				amikb_sendkey(amigaKeyCode, keyPressed);
-				amikb_wait_for_ack_resync_if_none();
-			}
+			amikb_sendkey(amigaKeyCode, keyPressed);
+			amikb_wait_for_ack_resync_if_none();
 		}
 	}
 
@@ -156,24 +151,26 @@ void updateStatusLEDs(unsigned char previousCount, unsigned char newCount, int p
 	}
 }
 
-void amikb_sendkey(unsigned char keycode, int press)
+void amikb_sendkey(unsigned char amigaKeycode, int press)
 {
 	int i;
 
-	//if(keycode == AKC_CAPS) {
+#if 0
+	if(amigaKeycode == AKC_CAPS) {
 		/* caps lock doesn't get a key release event when the key is released
 		 * but rather when the caps lock is toggled off again
 		 */
-		//if(!press) return;
+		if(!press) return;
 
-		//capslk = ~capslk;
-		//press = capslk;
-	//}
+		capslk = ~capslk;
+		press = capslk;
+	}
+#endif
 
-	/* keycode bit transfer order: 6 5 4 3 2 1 0 7 (7 is pressed flag) */
-	keycode = (keycode << 1) | (~press & 1);
-	if(keycode == prev_keycode) return;
-	prev_keycode = keycode;
+	/* amigaKeycode bit transfer order: 6 5 4 3 2 1 0 7 (7 is pressed flag) */
+	amigaKeycode = (amigaKeycode << 1) | (~press & 1);
+	if(amigaKeycode == prevAmigaKeycode) return;
+	prevAmigaKeycode = amigaKeycode;
 
 	/* make sure we don't pulse the lines while grabbing control
 	 * by first reinstating the pullups before changing direction
@@ -189,12 +186,12 @@ void amikb_sendkey(unsigned char keycode, int press)
 
 	for(i=0; i<8; i++) {
 		/* data line is inverted */
-		if(keycode & 0x80) {
+		if(amigaKeycode & 0x80) {
 			PORTF &= ~ADATA_BIT;
 		} else {
 			PORTF |= ADATA_BIT;
 		}
-		keycode <<= 1;
+		amigaKeycode <<= 1;
 		_delay_us(20);
 		/* pulse the clock */
 		cli();
