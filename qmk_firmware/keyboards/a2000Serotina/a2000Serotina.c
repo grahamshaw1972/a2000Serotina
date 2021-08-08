@@ -67,21 +67,52 @@ __attribute__((weak)) void matrix_init_user(void) {
 }
 
 static unsigned char prev_keycode = 0xff;
-static unsigned char capslk;
-static unsigned char lCtrlPressed = 0;
-static unsigned char lAltPressed = 0;
-static unsigned char rGuiPressed = 0;
+//static unsigned char capslk;
+static unsigned char amiga_key_pressed[AKC_MAX] = { 0 }; // Zero-fill
 
 __attribute__((weak)) bool process_record_user(uint16_t keycode, keyrecord_t *record) {
 
 	static int pressed = 0;
 
-	if( record->event.pressed) {
-		pressed++;
+	unsigned char amigaKeyCode = amiga_keycode_table[record->event.key.row][record->event.key.col];
+	unsigned char previousCount = amiga_key_pressed[amigaKeyCode];
+	bool keyPressed = record->event.pressed;
+
+	if( keyPressed ) {
+		amiga_key_pressed[amigaKeyCode]++;
 	} else {
+		amiga_key_pressed[amigaKeyCode]--;
+	}
+	unsigned char newCount = amiga_key_pressed[amigaKeyCode];
+
+	if( previousCount == 0 && newCount > 0 ) {
+		pressed++;
+	}
+
+	if( previousCount > 0 && newCount == 0 ) {
 		pressed--;
 	}
 
+	updateStatusLEDs(previousCount, newCount, pressed, amigaKeyCode);
+
+	if( amiga_key_pressed[AKC_CTRL] > 0 && amiga_key_pressed[AKC_LAMI] > 0 && amiga_key_pressed[AKC_RAMI] > 0 ) {
+		amikb_reset();
+	} else {
+		if( (previousCount == 0 && newCount > 0) || (previousCount > 0 && newCount == 0) ) {
+
+			// There is a bug with caps lock handling.
+			// Ignore caps lock as a temporary "fix"...
+			if(keycode != AKC_CAPS) {
+				amikb_sendkey(amigaKeyCode, keyPressed);
+				amikb_wait_for_ack_resync_if_none();
+			}
+		}
+	}
+
+	return true;
+}
+
+void updateStatusLEDs(unsigned char previousCount, unsigned char newCount, int pressed, unsigned char amigaKeyCode) {
 	if( pressed > 0 ) {
 		writePinHigh(STA3);
 	} else {
@@ -100,61 +131,44 @@ __attribute__((weak)) bool process_record_user(uint16_t keycode, keyrecord_t *re
 		writePinLow(STA1);
 	}
 
-	if( keycode == KC_LCTL ) {
-		if( record->event.pressed) {
+	if( amigaKeyCode == AKC_CTRL ) {
+		if( newCount > 0 ) {
 			writePinHigh(E0);
-			lCtrlPressed = 1;
 		} else {
 			writePinLow(E0);
-			lCtrlPressed = 0;
 		}
 	}
 
-	if( keycode == KC_LALT ) {
-		if( record->event.pressed) {
+	if( amigaKeyCode == AKC_LAMI ) {
+		if( newCount > 0 ) {
 			writePinHigh(E1);
-			lAltPressed = 1;
 		} else {
 			writePinLow(E1);
-			lAltPressed = 0;
 		}
 	}
 
-	if( keycode == KC_RGUI ) {
-		if( record->event.pressed) {
+	if( amigaKeyCode == AKC_RAMI) {
+		if( newCount > 0 ) {
 			writePinHigh(B7);
-			rGuiPressed = 1;
 		} else {
 			writePinLow(B7);
-			rGuiPressed = 0;
 		}
 	}
-
-	if( lCtrlPressed && lAltPressed && rGuiPressed ) {
-		amikb_reset();
-	} else {
-		unsigned char amigaKeyCode = amiga_keycode_table[record->event.key.row][record->event.key.col];
-		amikb_sendkey(amigaKeyCode, record->event.pressed);
-		amikb_wait_for_ack_resync_if_none();
-	}
-
-	return true;
 }
-
 
 void amikb_sendkey(unsigned char keycode, int press)
 {
 	int i;
 
-	if(keycode == 0x62) {
+	//if(keycode == AKC_CAPS) {
 		/* caps lock doesn't get a key release event when the key is released
 		 * but rather when the caps lock is toggled off again
 		 */
-		if(!press) return;
+		//if(!press) return;
 
-		capslk = ~capslk;
-		press = capslk;
-	}
+		//capslk = ~capslk;
+		//press = capslk;
+	//}
 
 	/* keycode bit transfer order: 6 5 4 3 2 1 0 7 (7 is pressed flag) */
 	keycode = (keycode << 1) | (~press & 1);

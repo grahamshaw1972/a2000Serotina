@@ -35,30 +35,6 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 
 };
 
-
-/*
-const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
-    [0] = LAYOUT(
-        KC_LPRN, KC_RPRN, KC_PSLS, KC_PAST,
-        KC_P7,   KC_P8,   KC_P9,   KC_PMNS,
-        KC_P4,   KC_P5,   KC_P6,   KC_PPLS,
-        KC_P1,   KC_P2,   KC_P3,   KC_PENT,
-        KC_P0,            KC_PDOT
-    ),
-
-};
-*/
-
-/*
-unsigned char amiga_keycode_table[MATRIX_ROWS][MATRIX_COLS] = LAYOUT(
-		AKC_PLP,  AKC_PRP,   AKC_PDV,  AKC_PML,
-		AKC_P7,   AKC_P8,    AKC_P9,   AKC_PMN,
-		AKC_P4,   AKC_P5,    AKC_P6,   AKC_PPL,
-		AKC_P1,   AKC_P2,    AKC_P3,   AKC_PEN,
-		AKC_P0,              AKC_PDT
-    );
-*/
-
 unsigned char amiga_keycode_table[MATRIX_ROWS][MATRIX_COLS] = LAYOUT(
 		AKC_ESC,            AKC_F1,   AKC_F2,   AKC_F3,   AKC_F4,   AKC_F5,   AKC_F6,   AKC_F7,   AKC_F8,   AKC_F9,
 		AKC_F10,  AKC_SPR0, AKC_SPR1, AKC_SPR2, AKC_SPR3, AKC_SPR4,
