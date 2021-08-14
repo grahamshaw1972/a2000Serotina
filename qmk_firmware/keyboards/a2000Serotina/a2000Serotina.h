@@ -44,9 +44,14 @@ void updateStatusLEDs(unsigned char previousCount, unsigned char newCount, int p
 #define RESET_MSEC 500
 #define RESET_WARNING_FULL_MSEC 10000
 
-#define STA3 F3
-#define STA2 F4
-#define STA1 F5
+#define STA3_LED F3
+#define STA2_LED F4
+#define STA1_LED F5
+#define CTRL_LED E0
+#define LAMI_LED E1
+#define RAMI_LED B7
+#define CAPS_LED D7
+
 #define KDAT F7
 #define KCLK F6
 

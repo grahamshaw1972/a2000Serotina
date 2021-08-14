@@ -54,20 +54,20 @@ ISR(TIMER0_OVF_vect)
 }
 
 __attribute__((weak)) void matrix_init_user(void) {
-    setPinOutput(STA3);
-    setPinOutput(STA2);
-    setPinOutput(STA1);
+    setPinOutput(STA3_LED);
+    setPinOutput(STA2_LED);
+    setPinOutput(STA1_LED);
     setPinOutput(KCLK);
-    setPinOutput(E0);
-    setPinOutput(E1);
-    setPinOutput(B7);
+    setPinOutput(CTRL_LED);
+    setPinOutput(LAMI_LED);
+    setPinOutput(RAMI_LED);
+    setPinOutput(CAPS_LED);
     writePinHigh(KCLK);
 
     init_timer();
 }
 
 static unsigned char prevAmigaKeycode = 0xff;
-//static unsigned char capslk;
 static unsigned char amiga_key_pressed[AKC_MAX] = { 0 }; // Zero-fill
 
 __attribute__((weak)) bool process_record_user(uint16_t keycode, keyrecord_t *record) {
@@ -76,21 +76,34 @@ __attribute__((weak)) bool process_record_user(uint16_t keycode, keyrecord_t *re
 
 	unsigned char amigaKeyCode = amiga_keycode_table[record->event.key.row][record->event.key.col];
 	unsigned char previousCount = amiga_key_pressed[amigaKeyCode];
-	bool keyPressed = record->event.pressed;
+	bool physicalKeyPressed = record->event.pressed;
+	bool logicalKeyPressed;
 
-	if( keyPressed ) {
-		amiga_key_pressed[amigaKeyCode]++;
+	if( amigaKeyCode == AKC_CAPS ) {
+		if( physicalKeyPressed ) {
+			if(previousCount > 0) {
+				amiga_key_pressed[amigaKeyCode]=0;
+			} else {
+				amiga_key_pressed[amigaKeyCode]=1;
+			}
+		}
 	} else {
-		amiga_key_pressed[amigaKeyCode]--;
+		if( physicalKeyPressed ) {
+			amiga_key_pressed[amigaKeyCode]++;
+		} else {
+			amiga_key_pressed[amigaKeyCode]--;
+		}
 	}
 	unsigned char newCount = amiga_key_pressed[amigaKeyCode];
 
 	if( previousCount == 0 && newCount > 0 ) {
 		pressed++;
+		logicalKeyPressed = true;
 	}
 
 	if( previousCount > 0 && newCount == 0 ) {
 		pressed--;
+		logicalKeyPressed = false;
 	}
 
 	updateStatusLEDs(previousCount, newCount, pressed, amigaKeyCode);
@@ -99,7 +112,7 @@ __attribute__((weak)) bool process_record_user(uint16_t keycode, keyrecord_t *re
 		amikb_reset();
 	} else {
 		if( (previousCount == 0 && newCount > 0) || (previousCount > 0 && newCount == 0) ) {
-			amikb_sendkey(amigaKeyCode, keyPressed);
+			amikb_sendkey(amigaKeyCode, logicalKeyPressed);
 			amikb_wait_for_ack_resync_if_none();
 		}
 	}
@@ -109,44 +122,52 @@ __attribute__((weak)) bool process_record_user(uint16_t keycode, keyrecord_t *re
 
 void updateStatusLEDs(unsigned char previousCount, unsigned char newCount, int pressed, unsigned char amigaKeyCode) {
 	if( pressed > 0 ) {
-		writePinHigh(STA3);
+		writePinHigh(STA3_LED);
 	} else {
-		writePinLow(STA3);
+		writePinLow(STA3_LED);
 	}
 
 	if( pressed > 1 ) {
-		writePinHigh(STA2);
+		writePinHigh(STA2_LED);
 	} else {
-		writePinLow(STA2);
+		writePinLow(STA2_LED);
 	}
 
 	if( pressed > 2 ) {
-		writePinHigh(STA1);
+		writePinHigh(STA1_LED);
 	} else {
-		writePinLow(STA1);
+		writePinLow(STA1_LED);
 	}
 
 	if( amigaKeyCode == AKC_CTRL ) {
 		if( newCount > 0 ) {
-			writePinHigh(E0);
+			writePinHigh(CTRL_LED);
 		} else {
-			writePinLow(E0);
+			writePinLow(CTRL_LED);
 		}
 	}
 
 	if( amigaKeyCode == AKC_LAMI ) {
 		if( newCount > 0 ) {
-			writePinHigh(E1);
+			writePinHigh(LAMI_LED);
 		} else {
-			writePinLow(E1);
+			writePinLow(LAMI_LED);
 		}
 	}
 
 	if( amigaKeyCode == AKC_RAMI) {
 		if( newCount > 0 ) {
-			writePinHigh(B7);
+			writePinHigh(RAMI_LED);
 		} else {
-			writePinLow(B7);
+			writePinLow(RAMI_LED);
+		}
+	}
+
+	if( amigaKeyCode == AKC_CAPS) {
+		if( newCount > 0 ) {
+			writePinHigh(CAPS_LED);
+		} else {
+			writePinLow(CAPS_LED);
 		}
 	}
 }
@@ -154,18 +175,6 @@ void updateStatusLEDs(unsigned char previousCount, unsigned char newCount, int p
 void amikb_sendkey(unsigned char amigaKeycode, int press)
 {
 	int i;
-
-#if 0
-	if(amigaKeycode == AKC_CAPS) {
-		/* caps lock doesn't get a key release event when the key is released
-		 * but rather when the caps lock is toggled off again
-		 */
-		if(!press) return;
-
-		capslk = ~capslk;
-		press = capslk;
-	}
-#endif
 
 	/* amigaKeycode bit transfer order: 6 5 4 3 2 1 0 7 (7 is pressed flag) */
 	amigaKeycode = (amigaKeycode << 1) | (~press & 1);
@@ -256,7 +265,7 @@ void wait_for_amiga(long timeout) {
 
 static void resync(void)
 {
-	writePinHigh(STA1);
+	writePinHigh(STA1_LED);
 
 	PORTF |= ACLK_BIT | ADATA_BIT;
 
