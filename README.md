@@ -34,7 +34,7 @@ The Serotina Keyboard will look like this:
 
 
 
-![a2000keyboardremake.png](keyboardLayoutEditor/a2000serotina.png)
+![a2000serotina_uk.png](keyboardLayoutEditor/uk/a2000serotina_uk.png)
 
 
 
