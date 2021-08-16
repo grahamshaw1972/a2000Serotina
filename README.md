@@ -52,7 +52,7 @@ When the build is completed, V1.0 looks like this:
 
 For Build Instructions, please see 
 
-[buildInstructions.md]: buildInstructions/buildInstructions.md
+[buildInstructions.md]: buildInstructions/buildInstructions.md	"here"
 
 
 
