@@ -17,14 +17,9 @@
 #include <avr/io.h>
 #include <avr/interrupt.h>
 #include <avr/power.h>
-
 #include "a2000Serotina.h"
 
 static void resync(void);
-
-#define PRESCL_256	4
-/* 256 ticks per interrupt, 256 clock divisor */
-#define TICKS_PER_SEC	(F_CPU / 256 / 256)
 
 static volatile unsigned long ticks;
 
@@ -53,6 +48,28 @@ ISR(TIMER0_OVF_vect)
 	++ticks;
 }
 
+void flash_leds(void) {
+	writePinHigh(STA3_LED);
+	writePinHigh(STA2_LED);
+	writePinHigh(STA1_LED);
+	writePinHigh(CTRL_LED);
+	writePinHigh(LAMI_LED);
+	writePinHigh(RAMI_LED);
+	writePinHigh(NLCK_LED);
+	writePinHigh(SLCK_LED);
+	writePinHigh(CAPS_LED);
+	_delay_ms(INIT_FLASH_MSEC);
+	writePinLow(STA3_LED);
+	writePinLow(STA2_LED);
+	writePinLow(STA1_LED);
+	writePinLow(CTRL_LED);
+	writePinLow(LAMI_LED);
+	writePinLow(RAMI_LED);
+	writePinLow(NLCK_LED);
+	writePinLow(SLCK_LED);
+	writePinLow(CAPS_LED);
+}
+
 __attribute__((weak)) void matrix_init_user(void) {
     setPinOutput(STA3_LED);
     setPinOutput(STA2_LED);
@@ -62,9 +79,12 @@ __attribute__((weak)) void matrix_init_user(void) {
     setPinOutput(LAMI_LED);
     setPinOutput(RAMI_LED);
     setPinOutput(CAPS_LED);
+
     writePinHigh(KCLK);
 
     init_timer();
+
+    flash_leds();
 }
 
 static unsigned char prevAmigaKeycode = 0xff;
@@ -106,7 +126,7 @@ __attribute__((weak)) bool process_record_user(uint16_t keycode, keyrecord_t *re
 		logicalKeyPressed = false;
 	}
 
-	updateStatusLEDs(previousCount, newCount, pressed, amigaKeyCode);
+	update_status_leds(previousCount, newCount, pressed, amigaKeyCode);
 
 	if( amiga_key_pressed[AKC_CTRL] > 0 && amiga_key_pressed[AKC_LAMI] > 0 && amiga_key_pressed[AKC_RAMI] > 0 ) {
 		amikb_reset();
@@ -120,7 +140,7 @@ __attribute__((weak)) bool process_record_user(uint16_t keycode, keyrecord_t *re
 	return true;
 }
 
-void updateStatusLEDs(unsigned char previousCount, unsigned char newCount, int pressed, unsigned char amigaKeyCode) {
+void update_status_leds(unsigned char previousCount, unsigned char newCount, int pressed, unsigned char amigaKeyCode) {
 	if( pressed > 0 ) {
 		writePinHigh(STA3_LED);
 	} else {

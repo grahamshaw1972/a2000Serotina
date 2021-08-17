@@ -98,3 +98,16 @@ Switches which require LEDs are:
 NB - Left Control, Left Amiga and Right Amiga light up when pressed because these are the three reset keys. If you don't want these keys to light up, then don't put an LED into these keys. You will certainly want an LED in the Caps Lock Key though. 
 
 ![](v1_1_withInSwitchLEDs.JPG)
+
+### 13. Make the Cable
+
+### 14. Connect the Cable
+
+### 15. Align the PCB in the case
+
+### 16. Screw the PCB into the case
+
+### 17. Clip the case closed
+
+### 18. Build Complete
+

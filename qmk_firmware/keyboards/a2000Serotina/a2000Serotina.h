@@ -29,7 +29,8 @@ void hard_reset(void);
 void init_timer(void);
 void reset_timer(void);
 unsigned long get_msec(void);
-void updateStatusLEDs(unsigned char previousCount, unsigned char newCount, int pressed, unsigned char amigaKeyCode);
+void update_status_leds(unsigned char previousCount, unsigned char newCount, int pressed, unsigned char amigaKeyCode);
+void flash_leds(void);
 
 // ACLK == KCLK == F6
 #define ACLK	6
@@ -39,6 +40,11 @@ void updateStatusLEDs(unsigned char previousCount, unsigned char newCount, int p
 #define ADATA	7
 #define ADATA_BIT	(1 << ADATA)
 
+#define PRESCL_256	4
+/* 256 ticks per interrupt, 256 clock divisor */
+#define TICKS_PER_SEC	(F_CPU / 256 / 256)
+
+#define INIT_FLASH_MSEC 1000
 #define TIMEOUT_MSEC 143
 #define RESET_WARNING_MSEC 250
 #define RESET_MSEC 500
@@ -50,7 +56,10 @@ void updateStatusLEDs(unsigned char previousCount, unsigned char newCount, int p
 #define CTRL_LED E0
 #define LAMI_LED E1
 #define RAMI_LED B7
+#define NLCK_LED D5
+#define SLCK_LED D6
 #define CAPS_LED D7
+
 
 #define KDAT F7
 #define KCLK F6
