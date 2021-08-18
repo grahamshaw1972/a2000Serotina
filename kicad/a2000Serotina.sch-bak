@@ -781,31 +781,6 @@ F 4 "NUBS" H 2883 7473 50  0000 C CNN "Key"
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	3300 9550 3250 9550
-$Comp
-L Device:D_Small D12
-U 1 1 60E65834
-P 3250 9650
-F 0 "D12" V 3250 9582 50  0000 R CNN
-F 1 "D_Small" V 3205 9582 50  0001 R CNN
-F 2 "Diode_THT:D_DO-35_SOD27_P7.62mm_Horizontal" V 3250 9650 50  0001 C CNN
-F 3 "~" V 3250 9650 50  0001 C CNN
-	1    3250 9650
-	0    -1   -1   0   
-$EndComp
-$Comp
-L MX_Alps_Hybrid:MX-NoLED MX12
-U 1 1 60E6582E
-P 3350 9400
-F 0 "MX12" H 3383 9671 60  0000 C CNN
-F 1 "MX-NoLED" H 3383 9549 20  0001 C CNN
-F 2 "MX_Alps_Hybrid:MX-1.25U-NoLED" H 2725 9375 60  0001 C CNN
-F 3 "" H 2725 9375 60  0001 C CNN
-F 4 "RCTRL" H 3383 9573 50  0000 C CNN "Key"
-	1    3350 9400
-	1    0    0    -1  
-$EndComp
-Wire Wire Line
 	2300 8850 2250 8850
 $Comp
 L Device:D_Small D11
@@ -2782,7 +2757,7 @@ F 3 "~" H 2450 8800 50  0001 C CNN
 	-1   0    0    1   
 $EndComp
 Text GLabel 2450 8900 2    50   Input ~ 0
-LCTRL
+CTRL
 $Comp
 L Device:R_Small R2
 U 1 1 60EFD92E
@@ -2950,90 +2925,6 @@ GND
 Wire Wire Line
 	12650 5950 12900 5950
 $Comp
-L Device:R_Small R9
-U 1 1 60FD484D
-P 13000 6300
-F 0 "R9" V 12804 6300 50  0000 C CNN
-F 1 "150" V 12895 6300 50  0000 C CNN
-F 2 "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal" H 13000 6300 50  0001 C CNN
-F 3 "~" H 13000 6300 50  0001 C CNN
-	1    13000 6300
-	0    1    1    0   
-$EndComp
-Text GLabel 13100 6300 2    50   Input ~ 0
-KCLK
-$Comp
-L Device:LED LED6
-U 1 1 60FD4854
-P 12500 6300
-F 0 "LED6" H 12493 6425 50  0000 C CNN
-F 1 "LED" H 12493 6425 50  0001 C CNN
-F 2 "LED_THT:LED_D3.0mm" H 12500 6300 50  0001 C CNN
-F 3 "~" H 12500 6300 50  0001 C CNN
-	1    12500 6300
-	1    0    0    -1  
-$EndComp
-Text GLabel 12350 6300 0    50   Input ~ 0
-GND
-Wire Wire Line
-	12650 6300 12900 6300
-$Comp
-L Device:R_Small R10
-U 1 1 60FF3D67
-P 13000 6650
-F 0 "R10" V 12804 6650 50  0000 C CNN
-F 1 "150" V 12895 6650 50  0000 C CNN
-F 2 "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal" H 13000 6650 50  0001 C CNN
-F 3 "~" H 13000 6650 50  0001 C CNN
-	1    13000 6650
-	0    1    1    0   
-$EndComp
-Text GLabel 13100 6650 2    50   Input ~ 0
-KDAT
-$Comp
-L Device:LED LED7
-U 1 1 60FF3D6E
-P 12500 6650
-F 0 "LED7" H 12493 6775 50  0000 C CNN
-F 1 "LED" H 12493 6775 50  0001 C CNN
-F 2 "LED_THT:LED_D3.0mm" H 12500 6650 50  0001 C CNN
-F 3 "~" H 12500 6650 50  0001 C CNN
-	1    12500 6650
-	1    0    0    -1  
-$EndComp
-Text GLabel 12350 6650 0    50   Input ~ 0
-GND
-Wire Wire Line
-	12650 6650 12900 6650
-$Comp
-L Device:R_Small R11
-U 1 1 61012FC1
-P 13000 7000
-F 0 "R11" V 12804 7000 50  0000 C CNN
-F 1 "150" V 12895 7000 50  0000 C CNN
-F 2 "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal" H 13000 7000 50  0001 C CNN
-F 3 "~" H 13000 7000 50  0001 C CNN
-	1    13000 7000
-	0    1    1    0   
-$EndComp
-Text GLabel 13100 7000 2    50   Input ~ 0
-VCC
-$Comp
-L Device:LED LED8
-U 1 1 61012FC8
-P 12500 7000
-F 0 "LED8" H 12493 7125 50  0000 C CNN
-F 1 "LED" H 12493 7125 50  0001 C CNN
-F 2 "LED_THT:LED_D3.0mm" H 12500 7000 50  0001 C CNN
-F 3 "~" H 12500 7000 50  0001 C CNN
-	1    12500 7000
-	1    0    0    -1  
-$EndComp
-Text GLabel 12350 7000 0    50   Input ~ 0
-GND
-Wire Wire Line
-	12650 7000 12900 7000
-$Comp
 L Device:R_Small R12
 U 1 1 610519E9
 P 2450 6000
@@ -3042,14 +2933,14 @@ F 1 "150" H 2509 5955 50  0000 L CNN
 F 2 "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal" H 2450 6000 50  0001 C CNN
 F 3 "~" H 2450 6000 50  0001 C CNN
 	1    2450 6000
-	1    0    0    -1  
+	-1   0    0    1   
 $EndComp
 Text GLabel 2100 6100 0    50   Input ~ 0
 CPLCK
 Text GLabel 18300 2000 0    50   Input ~ 0
 RGUI
 Text GLabel 18300 2900 0    50   Input ~ 0
-LCTRL
+CTRL
 Text GLabel 18300 3000 0    50   Input ~ 0
 LALT
 Text GLabel 18300 4600 0    50   Input ~ 0
@@ -3060,18 +2951,6 @@ Text GLabel 18300 4400 0    50   Input ~ 0
 STA3
 Text GLabel 2350 6000 3    50   Input ~ 0
 GND
-$Comp
-L MX_Alps_Hybrid:MX-LED MX7
-U 1 1 60E5D07F
-P 2350 5900
-F 0 "MX7" H 2432 6172 60  0000 C CNN
-F 1 "MX-LED" H 2432 6050 20  0001 C CNN
-F 2 "MX_Alps_Hybrid:MX-1.75U" H 1725 5875 60  0001 C CNN
-F 3 "" H 1725 5875 60  0001 C CNN
-F 4 "CAPS" H 2432 6074 50  0000 C CNN "Key"
-	1    2350 5900
-	1    0    0    -1  
-$EndComp
 Wire Wire Line
 	2100 6100 2450 6100
 $Comp
@@ -3394,13 +3273,7 @@ Wire Wire Line
 	3250 9050 5250 9050
 Connection ~ 3250 9050
 Wire Wire Line
-	2750 9750 3250 9750
-Wire Wire Line
-	3250 9750 3750 9750
-Connection ~ 3250 9750
-Wire Wire Line
 	3750 9750 4250 9750
-Connection ~ 3750 9750
 Wire Wire Line
 	4250 9750 4750 9750
 Connection ~ 4250 9750
@@ -3427,12 +3300,7 @@ Connection ~ 2500 3750
 Wire Wire Line
 	2500 4450 2500 5150
 Connection ~ 2500 4450
-Wire Wire Line
-	2500 5150 2500 5850
 Connection ~ 2500 5150
-Wire Wire Line
-	2500 5850 2500 6550
-Connection ~ 2500 5850
 Wire Wire Line
 	2500 6550 2500 7250
 Connection ~ 2500 6550
@@ -3500,9 +3368,6 @@ Connection ~ 3500 5850
 Wire Wire Line
 	3500 7250 3500 8650
 Connection ~ 3500 7250
-Wire Wire Line
-	3500 8650 3500 9350
-Connection ~ 3500 8650
 Wire Wire Line
 	4000 1350 4000 1650
 Wire Wire Line
@@ -3713,7 +3578,6 @@ Wire Wire Line
 Wire Wire Line
 	2250 9750 2750 9750
 Connection ~ 2250 9750
-Connection ~ 2750 9750
 Wire Wire Line
 	2500 8650 2500 9350
 Connection ~ 2500 8650
@@ -3806,7 +3670,7 @@ U 1 1 610BC7F5
 P 12400 2650
 F 0 "J1" H 13028 2446 50  0000 L CNN
 F 1 "90121-0766" H 13028 2355 50  0000 L CNN
-F 2 "901210766" H 13050 2750 50  0001 L CNN
+F 2 "SamacSys_Parts:901210766" H 13050 2750 50  0001 L CNN
 F 3 "http://www.molex.com/webdocs/datasheets/pdf/en-us/0901210766_PCB_HEADERS.pdf" H 13050 2650 50  0001 L CNN
 F 4 "6 way single row r/a header Molex C-GRID III Series, Series Number 90121, 2.54mm Pitch 6 Way 1 Row Right Angle Pin Header, Through Hole" H 13050 2550 50  0001 L CNN "Description"
 F 5 "4" H 13050 2450 50  0001 L CNN "Height"
@@ -3819,4 +3683,99 @@ F 9 "90121-0766" H 13050 2050 50  0001 L CNN "Manufacturer_Part_Number"
 $EndComp
 NoConn ~ 12400 2850
 NoConn ~ 12400 2950
+Wire Wire Line
+	3300 9550 3250 9550
+$Comp
+L Device:D_Small D12
+U 1 1 6122EF07
+P 3250 9650
+F 0 "D12" V 3250 9582 50  0000 R CNN
+F 1 "D_Small" V 3205 9582 50  0001 R CNN
+F 2 "Diode_THT:D_DO-35_SOD27_P7.62mm_Horizontal" V 3250 9650 50  0001 C CNN
+F 3 "~" V 3250 9650 50  0001 C CNN
+	1    3250 9650
+	0    -1   -1   0   
+$EndComp
+$Comp
+L Device:R_Small R13
+U 1 1 6122EF0D
+P 3450 9500
+F 0 "R13" V 3254 9500 50  0000 C CNN
+F 1 "150" V 3345 9500 50  0000 C CNN
+F 2 "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal" H 3450 9500 50  0001 C CNN
+F 3 "~" H 3450 9500 50  0001 C CNN
+	1    3450 9500
+	-1   0    0    1   
+$EndComp
+Text GLabel 3450 9600 3    50   Input ~ 0
+CTRL
+$Comp
+L MX_Alps_Hybrid:MX-LED MX12
+U 1 1 6122EF15
+P 3350 9400
+F 0 "MX12" H 3432 9672 60  0000 C CNN
+F 1 "MX-LED" H 3432 9550 20  0001 C CNN
+F 2 "MX_Alps_Hybrid:MX-1.25U" H 2725 9375 60  0001 C CNN
+F 3 "" H 2725 9375 60  0001 C CNN
+F 4 "RCTRL" H 3432 9574 50  0000 C CNN "Key"
+	1    3350 9400
+	1    0    0    -1  
+$EndComp
+Text GLabel 3350 9500 3    50   Input ~ 0
+GND
+Wire Wire Line
+	3500 8650 3500 9350
+Connection ~ 3500 8650
+Wire Wire Line
+	2750 9750 3250 9750
+Connection ~ 2750 9750
+Wire Wire Line
+	3250 9750 3750 9750
+Connection ~ 3250 9750
+Connection ~ 3750 9750
+Wire Wire Line
+	12650 6300 12900 6300
+Text GLabel 12350 6300 0    50   Input ~ 0
+GND
+$Comp
+L Device:LED LED6
+U 1 1 60FD4854
+P 12500 6300
+F 0 "LED6" H 12493 6425 50  0000 C CNN
+F 1 "LED" H 12493 6425 50  0001 C CNN
+F 2 "LED_THT:LED_D3.0mm" H 12500 6300 50  0001 C CNN
+F 3 "~" H 12500 6300 50  0001 C CNN
+	1    12500 6300
+	1    0    0    -1  
+$EndComp
+Text GLabel 13100 6300 2    50   Input ~ 0
+CPLCK
+$Comp
+L Device:R_Small R9
+U 1 1 60FD484D
+P 13000 6300
+F 0 "R9" V 12804 6300 50  0000 C CNN
+F 1 "150" V 12895 6300 50  0000 C CNN
+F 2 "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal" H 13000 6300 50  0001 C CNN
+F 3 "~" H 13000 6300 50  0001 C CNN
+	1    13000 6300
+	0    1    1    0   
+$EndComp
+Connection ~ 2500 5850
+Wire Wire Line
+	2500 5850 2500 6550
+Wire Wire Line
+	2500 5150 2500 5850
+$Comp
+L MX_Alps_Hybrid:MX-LED MX7
+U 1 1 60E5D07F
+P 2350 5900
+F 0 "MX7" H 2432 6172 60  0000 C CNN
+F 1 "MX-LED" H 2432 6050 20  0001 C CNN
+F 2 "MX_Alps_Hybrid:MX-1.75U" H 1725 5875 60  0001 C CNN
+F 3 "" H 1725 5875 60  0001 C CNN
+F 4 "CAPS" H 2432 6074 50  0000 C CNN "Key"
+	1    2350 5900
+	1    0    0    -1  
+$EndComp
 $EndSCHEMATC
