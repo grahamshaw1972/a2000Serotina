@@ -18,7 +18,7 @@ The A2000 Serotina Keyboard is a build it yourself Open Source Hardware Mechanic
 
 - Uses an Arduino micro-controller
 
-- Supports both Cherry MX and Alps type switches
+- Uses Cherry MX type switches
 
 - Uses QMK firmware ( with Amiga specific code added )
 
@@ -26,9 +26,8 @@ The A2000 Serotina Keyboard is a build it yourself Open Source Hardware Mechanic
 
 - Plugs directly in to an A2000 or A3000 using the 5 pin Din connector - no USB required
 
-- Functions as a PC keyboard via USB
-
   
+
 
 The keyboard layout for the UK keymap looks like this: 
 
