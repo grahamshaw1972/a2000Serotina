@@ -44,9 +44,9 @@ The PCB for V1.0 looks like this:
 
 
 
-When the build is completed, V1.0 looks like this: 
+When the build is completed, V1.2 looks like this: 
 
-![buildCompleteV1_0.jpg](buildCompleteV1_0.jpg)
+![buildCompleteV1_2.jpg](buildCompleteV1_2.jpg)
 
 
 
