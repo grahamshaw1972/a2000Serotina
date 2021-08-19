@@ -30,9 +30,7 @@ The A2000 Serotina Keyboard is a build it yourself Open Source Hardware Mechanic
 
   
 
-The Serotina Keyboard will look like this: 
-
-
+The keyboard layout for the UK keymap looks like this: 
 
 ![a2000serotina_uk.png](keyboardLayoutEditor/uk/a2000serotina_uk.png)
 
