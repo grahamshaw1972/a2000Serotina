@@ -99,15 +99,113 @@ NB - Left Control, Left Amiga and Right Amiga light up when pressed because thes
 
 ![](v1_1_withInSwitchLEDs.JPG)
 
-### 13. Make the Cable
+### 13. Drill The Keyboard Case
 
-### 14. Connect the Cable
+You will need to enlarge the hole in the keyboard case slightly, so that you can feed the 5 Pin Din connector into the hole. Using a 4.5mm Wood Drill bit, drill down, using the cable gutter as a guide. 
 
-### 15. Align the PCB in the case
+![](drilling.JPG)
 
-### 16. Screw the PCB into the case
+When you are done, the hole should look like this: 
 
-### 17. Clip the case closed
+![enlargedHole.JPG](enlargedHole.JPG)
 
-### 18. Build Complete
+You can now feed in the cable. There should still be some resistance. This is good, because it will provide some strain relief. 
 
+![cableInserted.JPG](cableInserted.JPG)
+
+You want approx 20cm of cable to go inside the case.
+
+![cableInCase.JPG](cableInCase.JPG)
+
+### 14. Remove the Outer Insulation 
+
+Cut off approx 25mm of insulation off the end of the cable using a craft knife. Careful not to cut too deep. If you do cut too deep, then you will cut through the shielding, which is used to carry one of the signals. 
+
+![endCut.JPG](endCut.JPG)
+
+Gather the copper insulation and twist into a wire. Remove the foil insulation. 
+
+![twisted.JPG](twisted.JPG)
+
+Put heat shrink over the newly wire and use a lighter or hot air to shrink. Also strip the top 3mm off all the other wires. 
+
+![shrunk.JPG](shrunk.JPG)
+
+NB - I had to use black heat shrink. It's the only one I have that is the correct size. That's not ideal, because there is already a black wire. I can still tell them apart because the heat shrink is thicker. However, if possible, choose a heat shrink colour which is different from the four other wires. 
+
+### 15. Crimp Dupont connectors
+
+Use a Dupont Crimping tool to put female connectors onto each wire. 
+
+![crimped.JPG](crimped.JPG)
+
+### 16. Insert the wires into a DuPont Plug
+
+Insert the wires into a Six hole DuPont Plug, leaving the third hole empty. 
+
+| DuPont Plug | 5 Pin Din | Signal   | Colour / Description |
+| ----------- | --------- | -------- | -------------------- |
+| 1           | 5         | Ground   | Green                |
+| 2           | 4         | VCC      | White                |
+| 3           |           |          | Leave Empty          |
+| 4           | 1         | Not Used | Red                  |
+| 5           | 3         | KCLK     | Black                |
+| 6           | 2         | KDAT     | Insulation           |
+
+NB - I chose to use this configuration for the DuPont Plug, because it matches the DuPont plug on the original A2000 Cherry keyboard. 
+
+Also note, that the numbering on the 5 pin Din is probably not what you would expect. It's numbered as follows: 
+
+![fivePinDinCorrectColours.JPG](fivePinDinCorrectColours.JPG)
+
+![dupontPlug.JPG](dupontPlug.JPG)
+
+### 17. Connect the PCB to the DuPont Plug
+
+Turn the keyboard PCB upside down and connect your DuPont Plug to the PCB.
+
+![connected.JPG](connected.JPG)
+
+### 18. Connect to an Amiga and Test
+
+The keyboard should look like this by now. 
+
+![inBottomCase.JPG](inBottomCase.JPG)
+
+It's now ready to connect to an Amiga and test it. I would recommend using Amiga Test Kit:
+
+https://github.com/keirf/Amiga-Stuff/releases
+
+Download and transfer the most recent version onto your Amiga. Press F2 to get to the Keyboard Test. Test each key by pressing it. You should be aiming for the following test result for the us_uk layout:
+
+![amigaTestKit.jpg](amigaTestKit.jpg)
+
+NB - for the International Layout, you would expect to see all keys as green, including the key to the right of left shift and also the key cut out from the Return key. 
+
+### 19. Screw the Keyboard into the case
+
+Screw the keyboard into the bottom case, using the four M3 * 6 self tapping screws. 
+
+![screwed.JPG](screwed.JPG)
+
+### 20. Put the Top case on
+
+Put the top case on. Be careful to line up properly. Once everything is lined up, push the three plastic mounting posts into the large holes. They should click on. Then close the plastic clips around the top edge. Finally close the plastic clips around the bottom edge. 
+
+![topCase.JPG](topCase.JPG)
+
+### 21. Attach Keycaps
+
+Attach the keycaps to the switches. 
+
+![v1_1_withKeyCaps.JPG](v1_1_withKeyCaps.JPG)
+
+Your keyboard is now complete. Time for one last test with Amiga Test Kit. 
+
+![](v1_1_complete.JPG)
+
+
+
+ENJOY. 
+
+:-)
