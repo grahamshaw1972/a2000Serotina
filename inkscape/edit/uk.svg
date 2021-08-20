@@ -15,7 +15,7 @@
    id="svg2"
    version="1.1"
    inkscape:version="0.92.4 (5da689c313, 2019-01-14)"
-   sodipodi:docname="isoUkRed.svg">
+   sodipodi:docname="uk.svg">
   <defs
      id="defs4">
     <symbol
@@ -118,10 +118,10 @@
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
      inkscape:zoom="4"
-     inkscape:cx="206.27555"
-     inkscape:cy="134.87238"
+     inkscape:cx="156.27518"
+     inkscape:cy="220.29369"
      inkscape:document-units="px"
-     inkscape:current-layer="layer6"
+     inkscape:current-layer="layer43"
      showgrid="false"
      units="in"
      inkscape:window-width="2560"
@@ -5828,6 +5828,30 @@
          x="955.34589"
          y="263.03088"
          id="tspan27764">]</tspan>
+    </text>
+    <text
+       id="text27722-0"
+       x="143.56676"
+       y="381.75726"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:14.66666698px;font-family:Arial;-inkscape-font-specification:'Arial, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;writing-mode:lr-tb;text-anchor:start;display:inline;fill:#000000;stroke-width:1.0666666"
+       transform="scale(0.99911987,1.0008809)">
+      <tspan
+         sodipodi:role="line"
+         id="tspan5889"
+         x="143.56676"
+         y="381.75726">|</tspan>
+    </text>
+    <text
+       id="text27722-0-1"
+       x="144.93947"
+       y="409.37579"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:14.66666698px;font-family:Arial;-inkscape-font-specification:'Arial, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;writing-mode:lr-tb;text-anchor:start;display:inline;fill:#000000;stroke-width:1.0666666"
+       transform="scale(0.99911987,1.0008809)">
+      <tspan
+         sodipodi:role="line"
+         id="tspan5909"
+         x="144.93947"
+         y="409.37579">\</tspan>
     </text>
   </g>
   <g
@@ -28123,11 +28147,6 @@
          sodipodi:role="line"
          id="tspan5925">)</tspan>
     </text>
-    <path
-       inkscape:connector-curvature="0"
-       d="m 155.68529,388.77107 h -6.92366 v -9.936 h -3.95317 l 7.4148,-7.41614 7.4152,7.41614 h -3.95317 z m -3.46203,-15.71188 -4.62372,4.62388 h 2.31206 v 9.936 h 4.62372 v -9.936 h 2.31192 z"
-       style="display:inline;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:1.06666672"
-       id="path24410-0" />
   </g>
   <g
      inkscape:groupmode="layer"
