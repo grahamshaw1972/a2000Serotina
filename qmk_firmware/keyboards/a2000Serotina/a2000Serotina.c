@@ -87,7 +87,6 @@ __attribute__((weak)) void matrix_init_user(void) {
     flash_leds();
 }
 
-static unsigned char prevAmigaKeycode = 0xff;
 static unsigned char amiga_key_pressed[AKC_MAX] = { 0 }; // Zero-fill
 
 __attribute__((weak)) bool process_record_user(uint16_t keycode, keyrecord_t *record) {
@@ -101,11 +100,7 @@ __attribute__((weak)) bool process_record_user(uint16_t keycode, keyrecord_t *re
 
 	if( amigaKeyCode == AKC_CAPS ) {
 		if( physicalKeyPressed ) {
-			if(previousCount > 0) {
-				amiga_key_pressed[amigaKeyCode]=0;
-			} else {
-				amiga_key_pressed[amigaKeyCode]=1;
-			}
+			amiga_key_pressed[amigaKeyCode] = (amiga_key_pressed[amigaKeyCode] + 1) % 2;
 		}
 	} else {
 		if( physicalKeyPressed ) {
@@ -198,8 +193,6 @@ void amikb_sendkey(unsigned char amigaKeycode, int press)
 
 	/* amigaKeycode bit transfer order: 6 5 4 3 2 1 0 7 (7 is pressed flag) */
 	amigaKeycode = (amigaKeycode << 1) | (~press & 1);
-	if(amigaKeycode == prevAmigaKeycode) return;
-	prevAmigaKeycode = amigaKeycode;
 
 	/* make sure we don't pulse the lines while grabbing control
 	 * by first reinstating the pullups before changing direction
@@ -236,8 +229,8 @@ void amikb_sendkey(unsigned char amigaKeycode, int press)
 void amikb_wait_for_ack_resync_if_none(void) {
 
 	/* similarly tristate first, then drop the pullups */
-	DDRF &= ~(ACLK_BIT | ADATA_BIT);
-	PORTF &= ~(ACLK_BIT | ADATA_BIT);
+	DDRF &= ~(ADATA_BIT);
+	PORTF &= ~(ADATA_BIT);
 
 	reset_timer();
 	// Wait for KDAT to go low
@@ -247,8 +240,8 @@ void amikb_wait_for_ack_resync_if_none(void) {
 			break;
 		}
 	}
-	DDRF |= ACLK_BIT;
-	PORTF |= ACLK_BIT;
+	DDRF |= ADATA_BIT;
+	PORTF |= ADATA_BIT;
 }
 
 void amikb_wait_for_ack_reset_if_none(long timeout) {
