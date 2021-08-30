@@ -198,7 +198,7 @@ Put the top case on. Be careful to line up properly. Once everything is lined up
 
 Attach the keycaps to the switches. 
 
-![v1_1_withKeyCaps.JPG](v1_1_withKeyCaps.JPG)
+![v1_2_withKeyCaps.JPG](v1_2_withKeyCaps.JPG)
 
 Your keyboard is now complete. Time for one last test with Amiga Test Kit. 
 
