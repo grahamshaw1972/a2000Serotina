@@ -189,6 +189,36 @@ Make sure you remove the correct two. You need to leave the one on the left as t
 
 ### 20. Attach the Stabilizers
 
-### 21. Put on the Top Case
+Attach the stabilizers.
 
-### 22. Final Test
+![v1_4_withStabilizers.JPG](v1_4_withStabilizers.JPG)
+
+### 21. Fit Keycaps for Stabilized keys
+
+There is a knack to fitting Costar stabilizers. Fit both the inserts into the key first. The longer part of the insert should be pointing towards the top of the keyboard for horizontal switches and the left of the keyboard for vertical switches. 
+
+![v1_4_inserts.JPG](v1_4_inserts.JPG)
+
+You can test by putting the keycap onto the switch and pushing down. If the keycap fits onto the switch stem and moves down okay, then you have the inserts fitted correctly. In order to fit onto the Stabilizer wire, put one side on as you move the keycap down and then push slightly to get the wire on the other side to clip into the insert. You can see a YouTube video about how to fit Costar stabilizers here: 
+
+[]: https://www.youtube.com/watch?v=oWgrnQGBBn4&amp;ab_channel=iluvbeanz	"Lubing stabilizers (Costar and Cherry)"
+
+![v1_4_withStabilizedKeys.JPG](v1_4_withStabilizedKeys.JPG)
+
+### 22. Put on the Top Case
+
+First rest the top case onto the top. There are three plastic posts that go into holes in the Mounting plate. Press the posts down first. Next, close all the clips. You should not need to press too hard. The plastic clips are quite fragile. If you press too hard, you might break them. 
+
+![v1_4_withTopCaseOn.JPG](v1_4_withTopCaseOn.JPG)
+
+### 22. Put on the rest of the Keycaps
+
+You are all done now, just need to put the rest of the keycaps on. 
+
+![v1_4_complete.JPG](v1_4_complete.JPG)
+
+### 23. Final Test
+
+And last thing is a final test. 
+
+![v1_4_finalTest.JPG](v1_4_finalTest.JPG)

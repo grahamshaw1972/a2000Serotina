@@ -35,17 +35,19 @@ The keyboard layout for the UK keymap looks like this:
 
 
 
-The PCB for V1.0 looks like this: 
+The PCB for V1.4 looks like this: 
 
-![pcbV1_0.PNG](pcbV1_0.PNG)
-
-
-
-When the build is completed, V1.2 looks like this: 
-
-![buildCompleteV1_2.jpg](buildCompleteV1_2.jpg)
+![v1_4_pcb.JPG](v1_4_pcb.JPG)
 
 
+
+When the build is completed, V1.4 looks like this: 
+
+![v1_4_complete.JPG](v1_4_complete.JPG)
+
+A family portrait. The V1.4 Serotina keyboard with it's bigger brother and the inspiration for the project. 
+
+![v1_4_familyPortrait.JPG](v1_4_familyPortrait.JPG)
 
 
 
