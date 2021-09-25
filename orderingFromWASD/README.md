@@ -1,4 +1,8 @@
-# Ordering Keycaps
+# Ordering From WASD
+
+You need to order the keycaps and a keyboard kit from WASD
+
+### Ordering Keycaps
 
 You can use WASD's custom keycap printing service to print the keycaps required by your keyboard. 
 
@@ -11,7 +15,7 @@ The overall process is as follows
 
 Before you start, choose which regional layout you would prefer and download the Inkscape (.svg) from the inkscape\complete directory
 
-[]: https://github.com/grahamshaw1972/a2000Serotina/tree/main/inkscape/complete	"inkscape/complete"
+https://github.com/grahamshaw1972/a2000Serotina/tree/main/inkscape/complete
 
 ### Choose the color of plastic for the keycaps
 
@@ -43,27 +47,49 @@ Click on Upload Design. Choose the Inkscape (.svg) file that you download first.
 
 ![](fileIncluded.JPG)
 
-Click ADD TO CART
-
-
+Click **ADD TO CART**
 
 That's all you need to do for the keycaps. 
 
-### Add the Case to your Cart
+### Add the Keyboard Kit to your Cart
 
-The A2000 Serotina keyboard has been designed to fit into this plastic case from WASD: 
+The A2000 Serotina Keyboard has been designed to fit a case and a mounting plate from WASD keyboards. The link is here:
 
-https://www.wasdkeyboards.com/wasd-v3-104-key-or-105-key-white-keyboard-case.html
+https://www.wasdkeyboards.com/wasd-v3-104-key-or-105-key-diy-kit.html
 
-Click ADD TO CART
+### Case Color
 
-NB - you don't need to buy the Upgrade to USB Type-C for $5.00
+Go for white. 
 
+![caseColor.JPG](caseColor.JPG)
 
+### PCB
+
+You don't need a PCB from WASD because you will be getting the PCB printed yourself.
+
+![noPcbRequired.JPG](noPcbRequired.JPG)
+
+### Steel Metal Plate
+
+Choose 105-Key ISO - Black
+
+![blackMetalPlate.JPG](blackMetalPlate.JPG)
+
+**NB** - it's important that you choose 105-Key ISO and not 104-Key ANSI
+
+### No Plate Mounted Stabilizer Clips
+
+You don't need any Plate Mounted Stabilizer Clips.
+
+![noStabilizerClips.JPG](noStabilizerClips.JPG)
+
+You have now selected all the Kit options you require. Click **ADD TO CART**
+
+![addToCart.JPG](addToCart.JPG)
 
 ### Buy Now
 
-You now have everything you need in your Cart, so you can CHECKOUT. 
+You now have both the keycaps and the keyboard kit in your Cart, so you can CHECKOUT. 
 
 
 
