@@ -4,7 +4,7 @@ These instructions detail the build process step by step. Please note, there is 
 
 ### 1. Solder the Diodes
 
-Solder Diodes D1 -> D105 to the front side of the PCB. Ensure that the polarity of the Diodes is correct. The black ring on the diode should match up to the marking on the PCB silk screen. 
+Solder Diodes D1 -> D105 to the PCB. Ensure that the polarity of the Diodes is correct. The black ring on the diode should match up to the white marking on the PCB silk screen. 
 
 ![v1_4_withDiodes.JPG](v1_4_withDiodes.JPG)
 
@@ -20,13 +20,21 @@ Solder the resistors R1, R2, R3, R4, R5, R6, R9, R10 and R11.
 
 ### 3. Solder the Right Angled Pin Header
 
-Solder the Right Angled Pin Header ( J1) to the back side of the PCB. Snip the third pin from the right.
+Solder the Right Angled Pin Header ( J1) to the **under side** of the PCB. Snip the third pin from the right.
 
 ![v1_4_rightAngledPinHeader.JPG](v1_4_rightAngledPinHeader.JPG)
 
 ### 4. Solder the Pin Headers onto the Teensy++ 2.0
 
+Snip the 40 pin pin header in half, giving 2 x 20 pin headers
+
+![v1_4_snipping.JPG](v1_4_snipping.JPG)
+
+![](v1_4_snipped.JPG)
+
 Solder the Pin headers onto the Teensy++ 2.0 Arduino MCU. Using the PCB holes as a guide makes this process easier. Solder the pin in each corner first, followed by all of the others. 
+
+**NB** - solder so that the metal collars are at the top and therefore so that the Teensy MCU is resting on top of the metal collars. The small metal posts above the collars should be poking through by approx 1.25 mm. 
 
 ![v1_1_teensyPins.JPG](v1_1_teensyPins.JPG)
 
@@ -34,7 +42,7 @@ Solder the Pin headers onto the Teensy++ 2.0 Arduino MCU. Using the PCB holes as
 
 ### 5. Flash the firmware onto the Teensy++ 2.0
 
-See here for instructions.
+See here for instructions:
 
 https://github.com/grahamshaw1972/a2000Serotina/tree/main/flashingFirmware
 
@@ -48,7 +56,7 @@ Solder the Teensy++ 2.0 onto the PCB.
 
 ### 7. Solder the LEDs to the PCB
 
-Solder the LEDs to the front side of the PCB. LEDs 1 -> 3 ( labelled STA1 -> 3 also ) are only required for debugging. So you only need to populate these LEDs if you are planning to debug the keyboard. Remember, that the long leg on the LED is the positive one. There are two holes on the footprint for each LED. One hole is round and the other is square. The round hole is the positive hole, so you need to insert the longer of the two legs into the round hole. 
+Solder the LEDs to the PCB. LEDs 1 -> 3 ( labelled STA1 -> 3 also ) are only required for debugging. So you only need to populate these LEDs if you are planning to debug the keyboard. Remember, that the long leg on the LED is the positive one. There are two holes on the footprint for each LED. One hole is round and the other is square. The round hole is the positive hole, so you need to insert the longer of the two legs into the round hole. 
 
 ![v1_4_ledsFitted.JPG](v1_4_ledsFitted.JPG)
 
@@ -70,11 +78,11 @@ Solder the switches inserted above. These will keep the PCB and the plate lined 
 
 ### 10. Place the Cherry MX Switches
 
-Push the Cherry MX switches into the holes in the mounting plate. If everything is lined up correctly, then the switches should just clip in. Solder one row at a time. 
+Push the MX switches into the holes in the mounting plate. Check that  both contacts of the switch are poking through the holes in the PCB. If they are not, then the switch will not work. You can fix by removing the switch, unbending the contacts and inserting again. 
 
 ### 11. Solder the Cherry MX Switches
 
-Solder the Cherry MX Switches onto the PCB. Note that the footprints on the PCB are for both MX and Alps switches. This means that there are two holes for the right switch contact. You don't need to solder both holes, just the hole with the contact in it. However, you can solder both holes if you would prefer. Either is fine. 
+Solder the Cherry MX Switches onto the PCB working in from the corners. Note that the footprints on the PCB are for both MX and Alps switches. This means that there are two holes for the right switch contact. You don't need to solder both holes, just the hole with the contact in it. However, you can solder both holes if you would prefer. Either is fine. 
 
 ![v1_4_switchesSoldered.JPG](v1_4_switchesSoldered.JPG)
 
@@ -126,11 +134,11 @@ Gather the copper insulation and twist into a wire. Remove the foil insulation.
 
 ![twisted.JPG](twisted.JPG)
 
-Put heat shrink over the newly wire and use a lighter or hot air to shrink. Also strip the top 3mm off all the other wires. 
+Put heat shrink over the new wire and use a lighter or hot air to shrink. Also strip the top 3mm off all the other wires. 
 
 ![shrunk.JPG](shrunk.JPG)
 
-NB - I had to use black heat shrink. It's the only one I have that is the correct size. That's not ideal, because there is already a black wire. I can still tell them apart because the heat shrink is thicker. However, if possible, choose a heat shrink colour which is different from the four other wires. NB - I chose yellow in Din plug pin out diagram in step 16. 
+**NB** - I had to use black heat shrink. It's the only one I have that is the correct size. That's not ideal, because there is already a black wire. I can still tell them apart because the heat shrink is thicker. However, if possible, choose a heat shrink colour which is different from the four other wires. I chose yellow in Din plug pin out diagram in step 16. 
 
 ### 15. Crimp Dupont connectors
 
@@ -142,18 +150,18 @@ Use a Dupont Crimping tool to put female connectors onto each wire.
 
 Insert the wires into a Six hole DuPont Plug, leaving the third hole empty. 
 
-| DuPont Plug | 5 Pin Din | Signal   | Colour / Description |
-| ----------- | --------- | -------- | -------------------- |
-| 1           | 5         | Ground   | Green                |
-| 2           | 4         | VCC      | White                |
-| 3           |           |          | Leave Empty          |
-| 4           | 1         | Not Used | Red                  |
-| 5           | 3         | KCLK     | Black                |
-| 6           | 2         | KDAT     | Shielding            |
+| DuPont Plug | 5 Pin Din | Signal   | Colour / Description* |
+| ----------- | --------- | -------- | --------------------- |
+| 1           | 5         | Ground   | Green                 |
+| 2           | 4         | VCC      | White                 |
+| 3           |           |          | Leave Empty           |
+| 4           | 1         | Not Used | Red                   |
+| 5           | 3         | KCLK     | Black                 |
+| 6           | 2         | KDAT     | Shielding             |
 
 NB - I chose to use this configuration for the DuPont Plug, because it matches the DuPont plug on the original A2000 Cherry keyboard. 
 
-It's possible that you are using a different 5 Pin Din cable, in which case the colours will likely be different. 
+\* It's possible that you are using a different 5 Pin Din cable, in which case the colours will be different. 
 
 Also note, that the numbering on the 5 pin Din is probably not what you would expect. It's numbered as follows: 
 
@@ -169,7 +177,7 @@ Turn the keyboard PCB upside down and connect your DuPont Plug to the PCB.
 
 ### 18. Check for shorts
 
-Now that the keyboard is connected to the cable, you need to check for shorts. If the 5V signal is shorted to GND for example, that would be very bad news for your Amiga. The best way to check for shorts is to use a multi-meter in continuity mode. Put one probe on a pin 1 of the 5 Pin Din Plug and the put the other probe onto each of the other pins one at a time. Work through each of the pins doing the same thing. You are expecting that none of the pins are connected. If you hear any beeps, then you have a short. You need to fix the short before connecting the keyboard to your Amiga. 
+Now that the keyboard is connected to the cable, you need to check for shorts. If the 5V signal is shorted to GND for example, that would be very bad news for your Amiga. The best way to check for shorts is to use a multi-meter in continuity mode. Put one probe on a pin of the 5 Pin Din Plug and the put the other probe onto each of the other pins one at a time. Work through each of the pins doing the same thing. You are expecting that none of the pins are connected. If you hear any beeps, then you have a short. You need to fix the short before connecting the keyboard to your Amiga. 
 
 ### 19. Connect to an Amiga and Test
 
@@ -185,11 +193,17 @@ Download and transfer the most recent version onto your Amiga. Press F2 to get t
 
 ![amigaTestKit.jpg](amigaTestKit.jpg)
 
-NB - for the International Layout, you would expect to see all keys as green, including the key to the right of left shift and also the key cut out from the Return key. 
+**NB** - for the International Layout, you would expect to see all keys as green, including the key to the right of left shift and also the key cut out from the Return key. 
+
+If you see any keys that aren't working, check
+
+* Diode for that key is in the correct orientation
+* Both switch contacts are poking through the holes
+* Both switch contacts are soldered
 
 ### 20. Remove unwanted LED light guides
 
-The case has light guides for three LEDs. The Amiga doesn't have a Num Lock or a Scroll lock LEDs, so these LEDs are also not required. What's more, due to the positioning of the Teensy 2.0++ MCU, these light guides will prevent the case from being closed. It's necessary to remove the light guides from the case. Use you side cutters to cut the light guides into quarters and then eighths. Then use a pair of pliers to gently waggle the plastic until it comes off. The plastic is quite soft and will come away easily after a few waggles, without the need for force or pulling. 
+The case has light guides for three LEDs. The Amiga doesn't have a Num Lock or a Scroll lock LEDs, so these LEDs are also not required. What's more, due to the positioning of the Teensy 2.0++ MCU, these light guides will prevent the case from being closed. It's necessary to remove the light guides from the case. Use your side cutters to cut the light guides into quarters and then eighths. Then use a pair of pliers to gently waggle the plastic until it comes off. The plastic is quite soft and will come away easily after a few waggles, without the need for force or pulling. 
 
 ![v1_4_removeLightGuides.JPG](v1_4_removeLightGuides.JPG)
 
@@ -199,11 +213,11 @@ Make sure you remove the correct two. You need to leave the one on the left as t
 
 ### 21. Attach the Stabilizers
 
-Attach the stabilizer bars to the plate:
+Attach the stabilizer clips and then bars to the plate:
 
 ![v1_4_withStabilizers.JPG](v1_4_withStabilizers.JPG)
 
-### 23. Fit Keycaps for Stabilized keys
+### 22. Fit Keycaps for Stabilized keys
 
 There is a knack to fitting Costar stabilizers. Fit both the inserts into the key first. The longer part of the insert should be pointing towards the top of the keyboard for horizontal switches and the left of the keyboard for vertical switches. 
 
@@ -211,26 +225,26 @@ There is a knack to fitting Costar stabilizers. Fit both the inserts into the ke
 
 You can test by putting the keycap onto the switch and pushing down. If the keycap fits onto the switch stem and moves down okay, then you have the inserts fitted correctly. In order to fit onto the Stabilizer wire, put one side on as you move the keycap down and then push slightly to get the wire on the other side to clip into the insert. You can see a YouTube video about how to fit Costar stabilizers here: 
 
-[]: https://www.youtube.com/watch?v=oWgrnQGBBn4&amp;ab_channel=iluvbeanz	"Lubing stabilizers (Costar and Cherry)"
+https://www.youtube.com/watch?v=oWgrnQGBBn4&amp;ab_channel=iluvbeanz
 
 ![v1_4_withStabilizedKeys.JPG](v1_4_withStabilizedKeys.JPG)
 
-### 24. Put on the Top Case
+### 23. Put on the Top Case
 
-First rest the top case onto the top. There are three plastic posts that go into holes in the Mounting plate. Press the posts down first. Next, close all the clips, working from the top, down the sides and lastly the bottom, i.e. where the Space row is located. You should not need to press too hard. The plastic clips are quite fragile. If you press too hard, you might break them. 
+First rest the top case onto the bottom case. There are three plastic posts that go into holes in the Mounting plate. Press the posts down first. Next, close all the clips, working from the top, down the sides and lastly the bottom, i.e. where the Space row is located. You should not need to press too hard. The plastic clips are quite fragile. If you press too hard, you might break them. 
 
 ![v1_4_withTopCaseOn.JPG](v1_4_withTopCaseOn.JPG)
 
-### 25. Put on the rest of the Keycaps
+### 24. Put on the rest of the Keycaps
 
 You are all done now, just need to put the rest of the keycaps on. 
 
 ![v1_4_complete.JPG](v1_4_complete.JPG)
 
-### 26. Final Test
+### 25. Final Test
 
 And last thing is a final test. 
 
 ![v1_4_finalTest.JPG](v1_4_finalTest.JPG)
 
-### 27. Enjoy :-)
+### 26. Enjoy :-)
