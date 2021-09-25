@@ -14,11 +14,11 @@ https://github.com/grahamshaw1972/a2000Serotina/tree/main/qmk_firmware
 
 There are currently three firmware files to choose from
 
-| File Name                       | Description                                                  | URL                                                          |
-| ------------------------------- | ------------------------------------------------------------ | ------------------------------------------------------------ |
-| a2000Serotina_pc_testing_uk.hex | Use this firmware for testing if you want to test the keyboard connected to a PC via USB. This firmware is no good for an Amiga. | https://github.com/grahamshaw1972/a2000Serotina/blob/main/qmk_firmware/a2000Serotina_pc_testing_uk.hex |
-| a2000Serotina_us_uk.hex         | Use this firmware for both the US and UK keyboard layouts    | https://github.com/grahamshaw1972/a2000Serotina/blob/main/qmk_firmware/a2000Serotina_us_uk.hex |
-| a2000Serotina_international.hex | Use this firmware for all other keyboard layouts             | https://github.com/grahamshaw1972/a2000Serotina/blob/main/qmk_firmware/a2000Serotina_international.hex |
+| File Name                                                    | Description                                                  |
+| ------------------------------------------------------------ | ------------------------------------------------------------ |
+| https://github.com/grahamshaw1972/a2000Serotina/blob/main/qmk_firmware/a2000Serotina_pc_testing_uk.hex | a2000Serotina_pc_testing_uk.hex: Use this firmware for testing if you want to test the keyboard connected to a PC via USB. This firmware is no good for an Amiga. |
+| https://github.com/grahamshaw1972/a2000Serotina/blob/main/qmk_firmware/a2000Serotina_us_uk.hex | a2000Serotina_us_uk.hex: Use this firmware for both the US and UK keyboard layouts |
+| https://github.com/grahamshaw1972/a2000Serotina/blob/main/qmk_firmware/a2000Serotina_international.hex | a2000Serotina_international.hex: Use this firmware for all other keyboard layouts |
 
 ### Install Teensy Loader
 
@@ -36,19 +36,15 @@ The PJRC website also contains instructions on how to use Teensy Loader to load 
 
 #### Windows: 
 
-[Windows]: https://www.pjrc.com/teensy/loader_win10.html	"Windows"
-
-
+https://www.pjrc.com/teensy/loader_win10.html
 
 ### Linux:
 
-[Linux]: https://www.pjrc.com/teensy/loader_linux.html	"Linux"
-
-
+https://www.pjrc.com/teensy/loader_linux.html
 
 ### Mac:
 
-[Mac]: https://www.pjrc.com/teensy/loader_mac.html	"Mac"
+https://www.pjrc.com/teensy/loader_mac.html
 
 
 
