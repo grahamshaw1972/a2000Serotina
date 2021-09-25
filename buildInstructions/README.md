@@ -1,6 +1,6 @@
 # A2000 Serotina Build Instructions
 
-These instructions detail the build process step by step. 
+These instructions detail the build process step by step. Please note, there is an interative BOM html file located in bom/a2000Serotina.html. You can download this file and open it in your file browser. This will tell you the locations of each of the components. However, it's pretty easy to work out where everything needs to go to be honest. The only slight gotcha is that J1 ( right angled pin header ) needs to be soldered to the under / back side of the PCB - see step 3. 
 
 ### 1. Solder the Diodes
 
@@ -12,7 +12,9 @@ Solder Diodes D1 -> D105 to the front side of the PCB. Ensure that the polarity 
 
 ### 2. Solder the Resistors
 
-Solder the resistors R1 -> R12 to the front side of the PCB. Resistors R4 -> R6, R9 and R10 are for debug status LEDs, so you only need to populate these if you are planning to debug the keyboard.![v1_4_withResistors.JPG](v1_4_withResistors.JPG)
+Solder the resistors R1, R2, R3, R4, R5, R6, R9, R10 and R11. 
+
+![v1_4_withResistors.JPG](v1_4_withResistors.JPG)
 
 
 
@@ -44,7 +46,7 @@ Solder the Teensy++ 2.0 onto the PCB.
 
 ### 7. Solder the LEDs to the PCB
 
-Solder the LEDs to the front side of the PCB. LED1 -> 3, and LED6 -> 8 are only required for debugging. So you only need to populate these LEDs if you are planning to debug the keyboard. Remember, that the long leg on the LED is the positive one. There are two holes on the footprint for each LED. One hole is round and the other is square. The round hole is the positive hole, so you need to insert the longer of the two legs into the round hole. 
+Solder the LEDs to the front side of the PCB. LEDs 1 -> 3 ( labelled STA1 -> 3 also ) are only required for debugging. So you only need to populate these LEDs if you are planning to debug the keyboard. Remember, that the long leg on the LED is the positive one. There are two holes on the footprint for each LED. One hole is round and the other is square. The round hole is the positive hole, so you need to insert the longer of the two legs into the round hole. 
 
 ![v1_4_ledsFitted.JPG](v1_4_ledsFitted.JPG)
 
@@ -126,7 +128,7 @@ Put heat shrink over the newly wire and use a lighter or hot air to shrink. Also
 
 ![shrunk.JPG](shrunk.JPG)
 
-NB - I had to use black heat shrink. It's the only one I have that is the correct size. That's not ideal, because there is already a black wire. I can still tell them apart because the heat shrink is thicker. However, if possible, choose a heat shrink colour which is different from the four other wires. 
+NB - I had to use black heat shrink. It's the only one I have that is the correct size. That's not ideal, because there is already a black wire. I can still tell them apart because the heat shrink is thicker. However, if possible, choose a heat shrink colour which is different from the four other wires. NB - I chose yellow in Din plug pin out diagram in step 16. 
 
 ### 15. Crimp Dupont connectors
 
@@ -149,6 +151,8 @@ Insert the wires into a Six hole DuPont Plug, leaving the third hole empty.
 
 NB - I chose to use this configuration for the DuPont Plug, because it matches the DuPont plug on the original A2000 Cherry keyboard. 
 
+It's possible that you are using a different 5 Pin Din cable, in which case the colours will likely be different. 
+
 Also note, that the numbering on the 5 pin Din is probably not what you would expect. It's numbered as follows: 
 
 ![fivePinDinCorrectColours.JPG](fivePinDinCorrectColours.JPG)
@@ -161,7 +165,11 @@ Turn the keyboard PCB upside down and connect your DuPont Plug to the PCB.
 
 ![V1_4_connected.JPG](V1_4_connected.JPG)
 
-### 18. Connect to an Amiga and Test
+### 18. Check for shorts
+
+Now that the keyboard is connected to the cable, you need to check for shorts. If the 5V signal is shorted to GND for example, that would be very bad news for your Amiga. The best way to check for shorts is to use a multi-meter in continuity mode. Put one probe on a pin 1 of the 5 Pin Din Plug and the put the other probe onto each of the other pins one at a time. Work through each of the pins doing the same thing. You are expecting that none of the pins are connected. If you hear any beeps, then you have a short. You need to fix the short before connecting the keyboard to your Amiga. 
+
+### 19. Connect to an Amiga and Test
 
 The keyboard should look like this by now. 
 
@@ -177,9 +185,9 @@ Download and transfer the most recent version onto your Amiga. Press F2 to get t
 
 NB - for the International Layout, you would expect to see all keys as green, including the key to the right of left shift and also the key cut out from the Return key. 
 
-### 19. Remove unwanted LED light guides
+### 20. Remove unwanted LED light guides
 
-The case has light guides for three LEDs. The Amiga doesn't have a Num Lock or a Scroll lock key, so these LEDs are also not required. What's more, due to the positioning of the Teensy 2.0++ MCU, these light guides will prevent the case from being closed. It's necessary to remove the light guides from the case. Use you side cutters to cut the light guides into quarters and then eighths. Then use a pair of pliers to gently waggle the plastic until it comes off. The plastic is quite soft and will come away easily after a few waggles, without the need for force or pulling. 
+The case has light guides for three LEDs. The Amiga doesn't have a Num Lock or a Scroll lock LEDs, so these LEDs are also not required. What's more, due to the positioning of the Teensy 2.0++ MCU, these light guides will prevent the case from being closed. It's necessary to remove the light guides from the case. Use you side cutters to cut the light guides into quarters and then eighths. Then use a pair of pliers to gently waggle the plastic until it comes off. The plastic is quite soft and will come away easily after a few waggles, without the need for force or pulling. 
 
 ![v1_4_removeLightGuides.JPG](v1_4_removeLightGuides.JPG)
 
@@ -187,13 +195,13 @@ The case has light guides for three LEDs. The Amiga doesn't have a Num Lock or a
 
 Make sure you remove the correct two. You need to leave the one on the left as the case is upside down for guiding the Caps Lock LED. Look at where the LED is on the PCB if you are unsure. 
 
-### 20. Attach the Stabilizers
+### 21. Attach the Stabilizers
 
-Attach the stabilizers.
+Attach the stabilizer bars to the plate:
 
 ![v1_4_withStabilizers.JPG](v1_4_withStabilizers.JPG)
 
-### 21. Fit Keycaps for Stabilized keys
+### 23. Fit Keycaps for Stabilized keys
 
 There is a knack to fitting Costar stabilizers. Fit both the inserts into the key first. The longer part of the insert should be pointing towards the top of the keyboard for horizontal switches and the left of the keyboard for vertical switches. 
 
@@ -205,20 +213,22 @@ You can test by putting the keycap onto the switch and pushing down. If the keyc
 
 ![v1_4_withStabilizedKeys.JPG](v1_4_withStabilizedKeys.JPG)
 
-### 22. Put on the Top Case
+### 24. Put on the Top Case
 
-First rest the top case onto the top. There are three plastic posts that go into holes in the Mounting plate. Press the posts down first. Next, close all the clips. You should not need to press too hard. The plastic clips are quite fragile. If you press too hard, you might break them. 
+First rest the top case onto the top. There are three plastic posts that go into holes in the Mounting plate. Press the posts down first. Next, close all the clips, working from the top, down the sides and lastly the bottom, i.e. where the Space row is located. You should not need to press too hard. The plastic clips are quite fragile. If you press too hard, you might break them. 
 
 ![v1_4_withTopCaseOn.JPG](v1_4_withTopCaseOn.JPG)
 
-### 22. Put on the rest of the Keycaps
+### 25. Put on the rest of the Keycaps
 
 You are all done now, just need to put the rest of the keycaps on. 
 
 ![v1_4_complete.JPG](v1_4_complete.JPG)
 
-### 23. Final Test
+### 26. Final Test
 
 And last thing is a final test. 
 
 ![v1_4_finalTest.JPG](v1_4_finalTest.JPG)
+
+### 27. Enjoy :-)
