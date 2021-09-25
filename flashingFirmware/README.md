@@ -6,7 +6,7 @@ This page details the process that you need to follow to flash firmware onto the
 
 The firmware can be downloaded from the Github page 
 
-[here]: https://github.com/grahamshaw1972/a2000Serotina/tree/main/qmk_firmware	"qmk_firmware"
+https://github.com/grahamshaw1972/a2000Serotina/tree/main/qmk_firmware
 
 
 
@@ -14,11 +14,11 @@ The firmware can be downloaded from the Github page
 
 There are currently three firmware files to choose from
 
-| File Name                       | Description                                                  |
-| ------------------------------- | ------------------------------------------------------------ |
-| a2000Serotina_pc_testing_uk.hex | Use this firmware for testing if you want to test the keyboard connected to a PC via USB. This firmware is no good for an Amiga. |
-| a2000Serotina_us_uk.hex         | Use this firmware for both the US and UK keyboard layouts    |
-| a2000Serotina_international.hex | Use this firmware for all other keyboard layouts             |
+| File Name                       | Description                                                  | URL                                                          |
+| ------------------------------- | ------------------------------------------------------------ | ------------------------------------------------------------ |
+| a2000Serotina_pc_testing_uk.hex | Use this firmware for testing if you want to test the keyboard connected to a PC via USB. This firmware is no good for an Amiga. | https://github.com/grahamshaw1972/a2000Serotina/blob/main/qmk_firmware/a2000Serotina_pc_testing_uk.hex |
+| a2000Serotina_us_uk.hex         | Use this firmware for both the US and UK keyboard layouts    | https://github.com/grahamshaw1972/a2000Serotina/blob/main/qmk_firmware/a2000Serotina_us_uk.hex |
+| a2000Serotina_international.hex | Use this firmware for all other keyboard layouts             | https://github.com/grahamshaw1972/a2000Serotina/blob/main/qmk_firmware/a2000Serotina_international.hex |
 
 ### Install Teensy Loader
 

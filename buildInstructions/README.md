@@ -36,6 +36,8 @@ Solder the Pin headers onto the Teensy++ 2.0 Arduino MCU. Using the PCB holes as
 
 See here for instructions.
 
+https://github.com/grahamshaw1972/a2000Serotina/tree/main/flashingFirmware
+
 ### 6. Solder the Teensy++ 2.0 onto the PCB
 
 Solder the Teensy++ 2.0 onto the PCB.
