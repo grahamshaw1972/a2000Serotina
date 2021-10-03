@@ -3533,7 +3533,7 @@ U 1 1 6108CB78
 P 11500 8500
 F 0 "H1" H 11600 8546 50  0000 L CNN
 F 1 "MountingHole" H 11600 8455 50  0000 L CNN
-F 2 "MountingHole:MountingHole_3.2mm_M3" H 11500 8500 50  0001 C CNN
+F 2 "MountingHole:MountingHole_6.4mm_M6" H 11500 8500 50  0001 C CNN
 F 3 "~" H 11500 8500 50  0001 C CNN
 	1    11500 8500
 	1    0    0    -1  
@@ -3544,7 +3544,7 @@ U 1 1 61091AB8
 P 11500 9000
 F 0 "H2" H 11600 9046 50  0000 L CNN
 F 1 "MountingHole" H 11600 8955 50  0000 L CNN
-F 2 "MountingHole:MountingHole_3.2mm_M3" H 11500 9000 50  0001 C CNN
+F 2 "MountingHole:MountingHole_6.4mm_M6" H 11500 9000 50  0001 C CNN
 F 3 "~" H 11500 9000 50  0001 C CNN
 	1    11500 9000
 	1    0    0    -1  
@@ -3555,7 +3555,7 @@ U 1 1 6109356F
 P 11500 9500
 F 0 "H3" H 11600 9546 50  0000 L CNN
 F 1 "MountingHole" H 11600 9455 50  0000 L CNN
-F 2 "MountingHole:MountingHole_3.2mm_M3" H 11500 9500 50  0001 C CNN
+F 2 "MountingHole:MountingHole_6.4mm_M6" H 11500 9500 50  0001 C CNN
 F 3 "~" H 11500 9500 50  0001 C CNN
 	1    11500 9500
 	1    0    0    -1  
@@ -3566,7 +3566,7 @@ U 1 1 61093A5D
 P 11500 10000
 F 0 "H4" H 11600 10046 50  0000 L CNN
 F 1 "MountingHole" H 11600 9955 50  0000 L CNN
-F 2 "MountingHole:MountingHole_3.2mm_M3" H 11500 10000 50  0001 C CNN
+F 2 "MountingHole:MountingHole_6.4mm_M6" H 11500 10000 50  0001 C CNN
 F 3 "~" H 11500 10000 50  0001 C CNN
 	1    11500 10000
 	1    0    0    -1  
@@ -3720,4 +3720,26 @@ F 4 "CAPS" H 2432 6074 50  0000 C CNN "Key"
 $EndComp
 NoConn ~ 18300 2600
 NoConn ~ 18300 2700
+$Comp
+L Mechanical:MountingHole H8
+U 1 1 615DC189
+P 13500 8500
+F 0 "H8" H 13600 8546 50  0000 L CNN
+F 1 "MountingHole" H 13600 8455 50  0000 L CNN
+F 2 "" H 13500 8500 50  0001 C CNN
+F 3 "~" H 13500 8500 50  0001 C CNN
+	1    13500 8500
+	1    0    0    -1  
+$EndComp
+$Comp
+L Mechanical:MountingHole H9
+U 1 1 615DD58D
+P 13500 9000
+F 0 "H9" H 13600 9046 50  0000 L CNN
+F 1 "MountingHole" H 13600 8955 50  0000 L CNN
+F 2 "" H 13500 9000 50  0001 C CNN
+F 3 "~" H 13500 9000 50  0001 C CNN
+	1    13500 9000
+	1    0    0    -1  
+$EndComp
 $EndSCHEMATC

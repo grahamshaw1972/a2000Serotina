@@ -3720,4 +3720,26 @@ F 4 "CAPS" H 2432 6074 50  0000 C CNN "Key"
 $EndComp
 NoConn ~ 18300 2600
 NoConn ~ 18300 2700
+$Comp
+L Mechanical:MountingHole H8
+U 1 1 615DC189
+P 13500 8500
+F 0 "H8" H 13600 8546 50  0000 L CNN
+F 1 "MountingHole" H 13600 8455 50  0000 L CNN
+F 2 "MountingHole:MountingHole_2.5mm" H 13500 8500 50  0001 C CNN
+F 3 "~" H 13500 8500 50  0001 C CNN
+	1    13500 8500
+	1    0    0    -1  
+$EndComp
+$Comp
+L Mechanical:MountingHole H9
+U 1 1 615DD58D
+P 13500 9000
+F 0 "H9" H 13600 9046 50  0000 L CNN
+F 1 "MountingHole" H 13600 8955 50  0000 L CNN
+F 2 "MountingHole:MountingHole_2.5mm" H 13500 9000 50  0001 C CNN
+F 3 "~" H 13500 9000 50  0001 C CNN
+	1    13500 9000
+	1    0    0    -1  
+$EndComp
 $EndSCHEMATC
