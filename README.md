@@ -35,9 +35,9 @@ The keyboard layout for the UK keymap looks like this:
 
 
 
-The PCB for V1.4 looks like this: 
+The PCB for V1.5 looks like this: 
 
-![v1_4_pcb.JPG](v1_4_pcb.JPG)
+![v1_5_pcb.JPG](v1_5_pcb.JPG)
 
 
 

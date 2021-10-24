@@ -6,7 +6,7 @@ These instructions detail the build process step by step. Please note, there is 
 
 Solder Diodes D1 -> D105 to the PCB. Ensure that the polarity of the Diodes is correct. The black ring on the diode should match up to the white marking on the PCB silk screen. 
 
-![v1_4_withDiodes.JPG](v1_4_withDiodes.JPG)
+![v1_5_withDiodes.JPG](v1_5_withDiodes.JPG)
 
 
 
@@ -14,7 +14,7 @@ Solder Diodes D1 -> D105 to the PCB. Ensure that the polarity of the Diodes is c
 
 Solder the resistors R1, R2, R3, R4, R5, R6, R9, R10 and R11. 
 
-![v1_4_withResistors.JPG](v1_4_withResistors.JPG)
+![v1_5_withResistors.JPG](v1_5_withResistors.JPG)
 
 
 
@@ -22,7 +22,7 @@ Solder the resistors R1, R2, R3, R4, R5, R6, R9, R10 and R11.
 
 Solder the Right Angled Pin Header ( J1) to the **under side** of the PCB. Snip the third pin from the right.
 
-![v1_4_rightAngledPinHeader.JPG](v1_4_rightAngledPinHeader.JPG)
+![v1_5_rightAngledPinHeader.JPG](v1_5_rightAngledPinHeader.JPG)
 
 ### 4. Solder the Pin Headers onto the Teensy++ 2.0
 
@@ -50,7 +50,7 @@ https://github.com/grahamshaw1972/a2000Serotina/tree/main/flashingFirmware
 
 Solder the Teensy++ 2.0 onto the PCB.
 
-![v1_4_teensyFitted.JPG](v1_4_teensyFitted.JPG)
+![v1_5_teensyFitted.JPG](v1_5_teensyFitted.JPG)
 
 
 
@@ -58,7 +58,7 @@ Solder the Teensy++ 2.0 onto the PCB.
 
 Solder the LEDs to the PCB. LEDs 1 -> 3 ( labelled STA1 -> 3 also ) are only required for debugging. So you only need to populate these LEDs if you are planning to debug the keyboard. Remember, that the long leg on the LED is the positive one. There are two holes on the footprint for each LED. One hole is round and the other is square. The round hole is the positive hole, so you need to insert the longer of the two legs into the round hole. 
 
-![v1_4_ledsFitted.JPG](v1_4_ledsFitted.JPG)
+![v1_5_ledsFitted.JPG](v1_5_ledsFitted.JPG)
 
 ### 8. Line up Plate with PCB
 
