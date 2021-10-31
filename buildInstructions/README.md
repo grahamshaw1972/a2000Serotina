@@ -60,11 +60,27 @@ Solder the LEDs to the PCB. LEDs 1 -> 3 ( labelled STA1 -> 3 also ) are only req
 
 ![v1_5_ledsFitted.JPG](v1_5_ledsFitted.JPG)
 
+### 8. Cut off PCB Switch Mounting Lugs ( if necessary )
+
+If you have got PCB mount switches, they have plastic mounting lugs on either side of the large central plastic post. 
+
+![cutLugsBefore.JPG](cutLugsBefore.JPG)
+
+This keyboard is a plate mount project, so the switches are clipped into the metal plate. The PCB mounting lugs are not required. What's more, there are no holes in the PCB for these to go into. So if you have PCB mount switches, you will need to clip of the mounting lugs with a side cutter. If you have plate mount switches, then this step is not required. 
+
+![cutLugs.JPG](cutLugs.JPG)
+
+When you have removed both PCB mounting lugs, the switch will look like this: 
+
+![cutLugsAfter.JPG](cutLugsAfter.JPG)
+
+NB - you will need to cut the mounting lugs off every switch. 
+
 ### 8. Line up Plate with PCB
 
 Line up the PCB with the mounting plate and place switches in each of the corners. 
 
-![v1_4_lineUp.JPG](v1_4_lineUp.JPG)
+![v1_5_lineUp.JPG](v1_5_lineUp.JPG)
 
 NB - you will need to bend the STA3 LED over a bit in order to fit under the mounting plate. This issue will be fixed in V1.5 of the PCB. 
 
@@ -72,7 +88,7 @@ NB - you will need to bend the STA3 LED over a bit in order to fit under the mou
 
 Solder the switches inserted above. These will keep the PCB and the plate lined up whilst soldering the rest of the switches. 
 
-![v1_4_sixSwitchesSoldered.JPG](v1_4_sixSwitchesSoldered.JPG)
+![v1_5_firstSwitchesSoldered.JPG](v1_5_firstSwitchesSoldered.JPG)
 
 
 
@@ -84,7 +100,7 @@ Push the MX switches into the holes in the mounting plate. Check that  both cont
 
 Solder the Cherry MX Switches onto the PCB working in from the corners. Note that the footprints on the PCB are for both MX and Alps switches. This means that there are two holes for the right switch contact. You don't need to solder both holes, just the hole with the contact in it. However, you can solder both holes if you would prefer. Either is fine. 
 
-![v1_4_switchesSoldered.JPG](v1_4_switchesSoldered.JPG)
+![v1_5_switchesSoldered.JPG](v1_5_switchesSoldered.JPG)
 
 ### 12. Solder the in-swtich LEDs
 
@@ -108,7 +124,7 @@ NB - Left Control, Right Control, Left Amiga and Right Amiga light up when press
 
 ### 13. Drill The Keyboard Case
 
-You will need to enlarge the hole in the keyboard case slightly, so that you can feed the 5 Pin Din connector into the hole. Using a 4.5mm Wood Drill bit, drill down, using the cable gutter as a guide. 
+You will need to enlarge the hole in the keyboard case slightly, so that you can feed the 5 Pin Din connector into the hole. Using a 5 mm Wood Drill bit, drill down, using the cable gutter as a guide. 
 
 ![](drilling.JPG)
 
@@ -181,9 +197,13 @@ Now that the keyboard is connected to the cable, you need to check for shorts. I
 
 ### 19. Connect to an Amiga and Test
 
+Drop the mounting plate / PCB into the bottom of the case. It should drop straight in and there should not be much room for misalignment. Screw the ( only ) large black metal screw supplied in the WASD keyboard kit into the case, through the hole in the mounting plate. 
+
+![v1_5_screwed.JPG](v1_5_screwed.JPG)
+
 The keyboard should look like this by now. 
 
-![V1_4_inBottomCase.JPG](V1_4_inBottomCase.JPG)
+![V1_5_inBottomCase.JPG](V1_5_inBottomCase.JPG)
 
 It's now ready to connect to an Amiga and test it. I would recommend using Amiga Test Kit:
 
@@ -215,7 +235,7 @@ Make sure you remove the correct two. You need to leave the one on the left as t
 
 Attach the stabilizer clips and then bars to the plate:
 
-![v1_4_withStabilizers.JPG](v1_4_withStabilizers.JPG)
+![v1_5_withStabilizers.JPG](v1_5_withStabilizers.JPG)
 
 ### 22. Fit Keycaps for Stabilized keys
 
@@ -227,19 +247,37 @@ You can test by putting the keycap onto the switch and pushing down. If the keyc
 
 https://www.youtube.com/watch?v=oWgrnQGBBn4&amp;ab_channel=iluvbeanz
 
-![v1_4_withStabilizedKeys.JPG](v1_4_withStabilizedKeys.JPG)
+![v1_5_withStabilizedKeys.JPG](v1_5_withStabilizedKeys.JPG)
 
 ### 23. Put on the Top Case
 
 First rest the top case onto the bottom case. There are three plastic posts that go into holes in the Mounting plate. Press the posts down first. Next, close all the clips, working from the top, down the sides and lastly the bottom, i.e. where the Space row is located. You should not need to press too hard. The plastic clips are quite fragile. If you press too hard, you might break them. 
 
-![v1_4_withTopCaseOn.JPG](v1_4_withTopCaseOn.JPG)
+![v1_5_withTopCaseOn.JPG](v1_5_withTopCaseOn.JPG)
+
+### 24. Put the feet on the bottom
+
+Stick the six rubber feet onto the bottom of the case
+
+![v1_5_withFeet.JPG](v1_5_withFeet.JPG)
+
+### 24. Screw the case closed
+
+Insert the three silver metal screws from the WASD keyboard kit into the three holes as shown and screw them tight. 
+
+![v1_5_withScrewsInBottomCase.JPG](v1_5_withScrewsInBottomCase.JPG)
+
+### 24. Fit Feet to bottom of case
+
+Fit the feet from the WASD keyboard kit to the bottom of the case. They just clip in, with a bit of encouragement. 
+
+![v1_5_withFeet2.JPG](v1_5_withFeet2.JPG)
 
 ### 24. Put on the rest of the Keycaps
 
 You are all done now, just need to put the rest of the keycaps on. 
 
-![v1_4_complete.JPG](v1_4_complete.JPG)
+![v1_5_complete.JPG](v1_5_complete.JPG)
 
 ### 25. Final Test
 
