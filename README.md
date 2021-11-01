@@ -2,11 +2,7 @@
 
 The A2000 Serotina Keyboard is a build it yourself Open Source Hardware Mechanical Keyboard for the Amiga A2000 and A3000 computers. Features are:
 
-- Uses standard PC keyboard parts
-
-- Uses standard PC keyboard case
-
-- Supports using standard PC keycaps
+- Uses standard PC keyboard parts, case + keycaps
 
 - Allows the use of the WASD keycap printing service for Amiga specific keycaps
 
