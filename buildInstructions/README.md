@@ -67,7 +67,7 @@ Also note, that the numbering on the 5 pin Din is probably not what you would ex
 
 ![dupontPlug.JPG](dupontPlug.JPG)
 
-You can make another cable with the other end of the 5 pin Din cable. This is handy for testing without putting the PCB into the case. 
+**You can make another cable with the other end of the 5 pin Din cable. This is handy for testing without putting the PCB into the case. **
 
 
 
@@ -103,7 +103,7 @@ Snip the 40 pin pin header in half, giving 2 x 20 pin headers
 
 Solder the Pin headers onto the Teensy++ 2.0 Arduino MCU. Using the PCB holes as a guide makes this process easier. Solder the pin in each corner first, followed by all of the others. 
 
-**NB** - solder so that the metal collars are at the top and therefore so that the Teensy MCU is resting on top of the metal collars. The small metal posts above the collars should be poking through by approx 1.25 mm. 
+**NB** - solder so that the plastic collars are at the top and therefore so that the Teensy MCU is resting on top of the plastic collars. The small metal posts above the collars should be poking through by approx 1.25 mm. 
 
 ![v1_1_teensyPins.JPG](v1_1_teensyPins.JPG)
 
@@ -123,9 +123,13 @@ Solder the Teensy++ 2.0 onto the PCB.
 
 
 
-### 11. Solder the LEDs to the PCB
+### 11. Solder the Caps Lock LED to the PCB
 
-Solder the LEDs to the PCB. LEDs 1 -> 3 ( labelled STA1 -> 3 also ) are only required for debugging. So you only need to populate these LEDs if you are planning to debug the keyboard. Remember, that the long leg on the LED is the positive one. There are two holes on the footprint for each LED. One hole is round and the other is square. The round hole is the positive hole, so you need to insert the longer of the two legs into the round hole. 
+Solder the Caps Lock LED ( LED6 ) to the PCB. **LEDs 1 -> 3 ( labelled STA1 -> 3 also ) are only required for debugging. Do not populate  these unless you are planning to debug the keyboard. **
+
+Remember, that the long leg on the LED is the positive one. There are two holes on the footprint for each LED. One hole is round and the other is square. The round hole is the positive hole, so you need to insert the longer of the two legs into the round hole. 
+
+
 
 ![v1_5_ledsFitted.JPG](v1_5_ledsFitted.JPG)
 
@@ -157,7 +161,7 @@ Line up the PCB with the mounting plate and place switches in each of the corner
 
 ![v1_5_lineUp.JPG](v1_5_lineUp.JPG)
 
-NB - you will need to bend the STA3 LED over a bit in order to fit under the mounting plate. This issue will be fixed in V1.5 of the PCB. 
+
 
 ### 15. Solder the first switches
 
