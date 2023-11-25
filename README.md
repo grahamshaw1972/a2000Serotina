@@ -23,7 +23,8 @@ The A2000 Serotina Keyboard is a build it yourself Open Source Hardware Mechanic
 - Plugs directly in to an A2000 or A3000 using the 5 pin Din connector - no USB required
 
   
-
+Jan Beta has done an excellent build video for this keyboard. Please take a look:
+https://youtu.be/dw3RDYq1Pn0?si=XJSP298tZxawzPFw
 
 The keyboard layout for the UK keymap looks like this: 
 
